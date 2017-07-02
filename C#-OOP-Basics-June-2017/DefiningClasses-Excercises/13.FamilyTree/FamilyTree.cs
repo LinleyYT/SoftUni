@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace _13.FamilyTree
 {
-    class Program
+    public class FamilyTree
     {
-        static void Main(string[] args)
+        public static void Main()
         {
+            var people = new List<Person>();
         }
     }
 }

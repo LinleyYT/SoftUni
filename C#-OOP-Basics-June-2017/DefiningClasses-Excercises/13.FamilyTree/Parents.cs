@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace _13.FamilyTree
 {
-    class Parents
+    public class Parents
     {
+        public string Name { get; set; }
+        public string Birthday { get; set; }
+
     }
 }

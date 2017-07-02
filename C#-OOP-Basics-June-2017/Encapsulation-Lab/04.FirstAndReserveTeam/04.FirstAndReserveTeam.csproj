@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50C19F3D-C952-4AF8-A490-F40A54F8F490}</ProjectGuid>
+    <ProjectGuid>{BAC3CB08-2543-4183-8781-E248594E7B52}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_13.FamilyTree</RootNamespace>
-    <AssemblyName>13.FamilyTree</AssemblyName>
+    <RootNamespace>_04.FirstAndReserveTeam</RootNamespace>
+    <AssemblyName>04.FirstAndReserveTeam</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,11 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Children.cs" />
-    <Compile Include="FamilyTree.cs" />
-    <Compile Include="Parents.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

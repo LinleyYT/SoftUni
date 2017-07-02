@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50C19F3D-C952-4AF8-A490-F40A54F8F490}</ProjectGuid>
+    <ProjectGuid>{B1E7E91F-1DF7-4438-BF67-8F00E13CC699}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_13.FamilyTree</RootNamespace>
-    <AssemblyName>13.FamilyTree</AssemblyName>
+    <RootNamespace>_03.ValidationData</RootNamespace>
+    <AssemblyName>03.ValidationData</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,10 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Children.cs" />
-    <Compile Include="FamilyTree.cs" />
-    <Compile Include="Parents.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

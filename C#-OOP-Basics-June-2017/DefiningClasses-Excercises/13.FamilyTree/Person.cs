@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace _13.FamilyTree
 {
-    class Person
+    public class Person
     {
+        public string Name { get; set; }
+        public string Birthday { get; set; }
+
+        
     }
 }
