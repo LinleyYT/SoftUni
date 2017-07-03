@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{63B0EC79-96E4-4174-BFEC-8D755EE46DC8}</ProjectGuid>
+    <ProjectGuid>{FD732E70-B7CF-4D42-8F56-D0D26250D7D8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_13.FamilyTree</RootNamespace>
-    <AssemblyName>13.FamilyTree</AssemblyName>
+    <RootNamespace>_05.PizzaCalories</RootNamespace>
+    <AssemblyName>05.PizzaCalories</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,9 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FamilyTree.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Dough.cs" />
+    <Compile Include="PizzaCalories.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Topping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
