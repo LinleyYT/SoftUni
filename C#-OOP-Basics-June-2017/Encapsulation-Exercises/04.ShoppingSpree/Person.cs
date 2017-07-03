@@ -13,7 +13,14 @@ namespace _04.ShoppingSpree
         public string Name
         {
             get { return this.name; }
-            set { this.name = value; }
+            set
+            {
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Name cannot be empty");
+                }
+                this.name = value;
+            }
         }
 
         private decimal money;

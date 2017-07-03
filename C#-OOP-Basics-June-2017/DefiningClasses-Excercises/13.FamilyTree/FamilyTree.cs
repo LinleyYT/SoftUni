@@ -10,7 +10,7 @@ namespace _13.FamilyTree
     {
         public static void Main()
         {
-            var people = new List<Person>();
+
         }
     }
 }

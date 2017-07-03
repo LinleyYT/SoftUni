@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50C19F3D-C952-4AF8-A490-F40A54F8F490}</ProjectGuid>
+    <ProjectGuid>{63B0EC79-96E4-4174-BFEC-8D755EE46DC8}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_13.FamilyTree</RootNamespace>
     <AssemblyName>13.FamilyTree</AssemblyName>
@@ -42,10 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Children.cs" />
     <Compile Include="FamilyTree.cs" />
-    <Compile Include="Parents.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
