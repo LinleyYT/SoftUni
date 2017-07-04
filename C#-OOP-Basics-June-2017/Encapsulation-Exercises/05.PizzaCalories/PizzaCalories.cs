@@ -10,36 +10,70 @@ namespace _05.PizzaCalories
     {
         public static void Main()
         {
-            try
-            {
-                string input;
 
-                while ((input = Console.ReadLine()) != "END")
+            string input;
+
+            while ((input = Console.ReadLine()) != "END")
+            {
+                var pizzaArgs = input.Split().Select(x => x.ToLower()).ToArray();
+
+                try
                 {
-                    var inputArgs = input.Split().Select(x => x.ToLower()).ToArray();
-                    var toppingArgs = Console.ReadLine().Split().Select(x => x.ToLower()).ToArray();
+                    
+                    if (pizzaArgs[0] == "dough")
+                    {
+                        var doughCheck = new Dough(pizzaArgs[1], pizzaArgs[2], double.Parse(pizzaArgs[3]));
+                        Console.WriteLine($"{doughCheck.GetCalories():f2}");
+                    }
+                    else if (pizzaArgs[0] == "topping")
+                    {
+                        var topping = new Topping(pizzaArgs[1], double.Parse(pizzaArgs[2]));
+                        Console.WriteLine($"{topping.GetCalories():f2}");
+                    }
+                    else if (pizzaArgs[0] == "pizza")
+                    {
+                        var numberOfToppings = int.Parse(pizzaArgs[2]);
 
-                    var flour = inputArgs[1];
-                    var tech = inputArgs[2];
-                    var weight = double.Parse(inputArgs[3]);
+                        if (numberOfToppings < 0 || numberOfToppings > 10)
+                        {
+                            throw new ArgumentException("Number of toppings should be in range [0..10].");
+                        }
 
-                    var dough = new Dough(flour, tech, weight);
+                        var pizzaName = pizzaArgs[1];
 
-                    Console.WriteLine($"{dough.GetCalories(flour, tech):F2}");
+                        var doughArgs = Console.ReadLine().Split().Select(x => x.ToLower()).ToArray();
+                        var doughType = doughArgs[1];
+                        var doughTech = doughArgs[2];
+                        var doughWeight = double.Parse(doughArgs[3]);
 
-                    var type = toppingArgs[1];
-                    var toppingWeight = double.Parse(toppingArgs[2]);
+                        var dough = new Dough(doughType, doughTech, doughWeight);
 
-                    var topping = new Topping(type, toppingWeight);
+                        var pizza = new Pizza(pizzaName, dough);
 
-                    Console.WriteLine($"{topping.GetCalories(type):F2}");
+                        for (int i = 0; i < numberOfToppings; i++)
+                        {
+                            var toppingArgs = Console.ReadLine().Split().Select(x => x.ToLower()).ToArray();
+                            var toppingType = toppingArgs[1];
+                            var toppingWeight = double.Parse(toppingArgs[2]);
+
+                            var topping = new Topping(toppingType, toppingWeight);
+                            pizza.AddTopping(topping);
+                        }
+
+                        Console.WriteLine($"{pizza.Name} - {pizza.GetTotalCalories():F2} Calories.");
+                    }
+                    
                 }
-                
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    return;
+                }
             }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine(e.Message);
-            }
+
+
+
+
 
         }
     }

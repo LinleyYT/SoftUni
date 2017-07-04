@@ -23,7 +23,7 @@ namespace _05.PizzaCalories
             {
                 if (value != "meat" && value != "veggies" && value != "cheese" && value != "sauce")
                 {
-                    throw new ArgumentException($"Cannot place {UppercaseFirst(value)} on top of your pizza");
+                    throw new ArgumentException($"Cannot place {UppercaseFirst(value)} on top of your pizza.");
                 }
 
                 this.type = value;
@@ -48,9 +48,9 @@ namespace _05.PizzaCalories
 
         private double typeMod;
 
-        public double GetCalories(string type)
+        public double GetCalories()
         {
-            switch (type)
+            switch (this.Type)
             {
                 case "meat":
                     typeMod = 1.2;

@@ -67,9 +67,9 @@ namespace _05.PizzaCalories
         private double flourTypeMod;
         private double doughTechMod;
 
-        public double GetCalories(string type, string tech)
+        public double GetCalories()
         {
-            switch (type)
+            switch (this.FlourType)
             {
                 case "white":
                     this.flourTypeMod = 1.5;
@@ -79,7 +79,7 @@ namespace _05.PizzaCalories
                     break;
             }
             
-            switch (tech)
+            switch (this.BakingTech)
             {
                 case "crispy":
                     this.doughTechMod = 0.9;
