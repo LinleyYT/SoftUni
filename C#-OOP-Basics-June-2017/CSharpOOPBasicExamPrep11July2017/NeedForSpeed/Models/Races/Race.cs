@@ -2,23 +2,33 @@
 
 public abstract class Race
 {
-    public Race(int length, string route, int prizePool, List<Car> participants)
+    public Race(int length, string route, int prizePool)
     {
         this.Length = length;
         this.Route = route;
         this.PrizePool = prizePool;
-        this.Participants = participants;
+        this.Participants = new List<Car>();
+        this.winners = new Dictionary<Car, int>();
     }
+
+    public const string NotEnoughParticipants = "Cannot start the race with zero participants.";
 
     private int length;
     private string route;
     private int prizePool;
     private List<Car> participants;
+    private Dictionary<Car, int> winners;
+
+    protected Dictionary<Car, int> Winners
+    {
+        get { return this.winners; }
+        set { this.winners = value; }
+    }
 
     public List<Car> Participants
     {
         get { return this.participants; }
-        protected set { this.participants = value; }
+        private set { this.participants = value; }
     }
 
     public int PrizePool
@@ -38,6 +48,26 @@ public abstract class Race
         get { return this.length; }
         protected set { this.length = value; }
     }
+
+    public void AddParticipant(Car participant)
+    {
+        this.Participants.Add(participant);
+    }
+
+    public void AddWinner(Car winnerCar, int points)
+    {
+        if (!this.winners.ContainsKey(winnerCar))
+        {
+            this.winners.Add(winnerCar, points);
+        }
+        else
+        {
+            this.winners[winnerCar] = points;
+        }
+    }
+
+    public abstract string StartRace();
+    public abstract int CalculatePerformancePoints(Car participant);
 }
 
 

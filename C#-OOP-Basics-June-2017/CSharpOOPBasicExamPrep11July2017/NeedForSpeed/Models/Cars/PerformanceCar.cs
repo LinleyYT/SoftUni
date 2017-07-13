@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 public class PerformanceCar : Car
 {
@@ -23,12 +24,33 @@ public class PerformanceCar : Car
     public List<string> AddOns
     {
         get { return this.addOns; }
-        set { this.addOns = value; }
+        private  set { this.addOns = value; }
+    }
+
+    public override void Tune(int tuneIndex, string addOn)
+    {
+        this.Horsepower += tuneIndex;
+        this.Suspension += tuneIndex / 2;
+        this.AddOns.Add(addOn);
     }
 
     public override string ToString()
     {
-        return "";
+        var sb = new StringBuilder();
+        sb.AppendLine($"{this.Brand} {this.Model} {this.YearOfProduction}");
+        sb.AppendLine($"{this.Horsepower} HP, 100 m/h in {this.Acceleration} s");
+        sb.AppendLine($"{this.Suspension} Suspension force, {this.Durability} Durability");
+
+        if (this.AddOns.Count > 0)
+        {
+            sb.Append($"Add-ons: {string.Join(", ", AddOns)}");
+        }
+        else
+        {
+            sb.AppendLine("Add-ons: None");
+        }
+
+        return sb.ToString();
     }
 }
 

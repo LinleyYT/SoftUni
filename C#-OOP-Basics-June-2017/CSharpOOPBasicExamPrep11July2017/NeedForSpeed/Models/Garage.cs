@@ -4,15 +4,44 @@ public class Garage
 {
     public Garage()
     {
-        this.ParkedCars = new List<Car>();
+        this.ParkedCars = new Dictionary<int, Car>();
     }
 
-    private List<Car> parkedCars;
+    private Dictionary<int, Car> parkedCars;
 
-    public List<Car> ParkedCars
+    public Dictionary<int, Car> ParkedCars
     {
         get { return this.parkedCars; }
-        set { this.parkedCars = value; }
+        private set { this.parkedCars = value; }
+    }
+
+    public void Park(int id, Car car)
+    {
+        if (!this.ParkedCars.ContainsKey(id))
+        {
+            this.ParkedCars.Add(id, car);
+        }
+        else
+        {
+            this.ParkedCars[id] = car;
+        }
+    }
+
+    public void Unpark(int id)
+    {
+        this.ParkedCars.Remove(id);
+    }
+
+    public bool IsCarParked(Car car)
+    {
+        if (this.ParkedCars.ContainsValue(car))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 

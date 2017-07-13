@@ -61,10 +61,8 @@
         protected set { this.brand = value; }
     }
 
-    public override string ToString()
-    {
-        return "";
-    }
+    public abstract void Tune(int tuneIndex, string addOn);
+    
 }
 
 

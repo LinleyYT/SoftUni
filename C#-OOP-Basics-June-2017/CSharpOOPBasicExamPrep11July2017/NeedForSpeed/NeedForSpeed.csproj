@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factories\CarFactory.cs" />
+    <Compile Include="Factories\RaceFactory.cs" />
+    <Compile Include="Functionality\CarManager.cs" />
+    <Compile Include="Functionality\Engine.cs" />
     <Compile Include="Models\Cars\Car.cs" />
     <Compile Include="Models\Cars\PerformanceCar.cs" />
     <Compile Include="Launcher.cs" />
