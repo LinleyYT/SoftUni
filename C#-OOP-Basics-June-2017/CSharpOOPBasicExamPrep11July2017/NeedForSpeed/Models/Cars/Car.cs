@@ -61,7 +61,11 @@
         protected set { this.brand = value; }
     }
 
-    public abstract void Tune(int tuneIndex, string addOn);
+    public virtual void Tune(int tuneIndex, string addOn)
+    {
+        this.Horsepower += tuneIndex;
+        this.Suspension += tuneIndex / 2;
+    }
     
 }
 

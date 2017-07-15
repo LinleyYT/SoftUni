@@ -29,8 +29,7 @@ public class PerformanceCar : Car
 
     public override void Tune(int tuneIndex, string addOn)
     {
-        this.Horsepower += tuneIndex;
-        this.Suspension += tuneIndex / 2;
+        base.Tune(tuneIndex, addOn);
         this.AddOns.Add(addOn);
     }
 

@@ -22,7 +22,7 @@ public abstract class Race
     protected Dictionary<Car, int> Winners
     {
         get { return this.winners; }
-        set { this.winners = value; }
+        private set { this.winners = value; }
     }
 
     public List<Car> Participants

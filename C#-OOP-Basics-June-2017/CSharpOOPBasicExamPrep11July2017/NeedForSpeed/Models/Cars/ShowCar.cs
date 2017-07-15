@@ -25,8 +25,7 @@ public class ShowCar : Car
 
     public override void Tune(int tuneIndex, string addon)
     {
-        this.Horsepower += tuneIndex;
-        this.Suspension += tuneIndex / 2;
+        base.Tune(tuneIndex, addon);
         this.Stars += tuneIndex;
     }
 
