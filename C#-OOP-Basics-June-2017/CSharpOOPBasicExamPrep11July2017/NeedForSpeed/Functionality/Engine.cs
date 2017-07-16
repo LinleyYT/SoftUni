@@ -46,13 +46,27 @@ public class Engine
                 Console.WriteLine(Manager.Check(checkId));
                 break;
             case "open":
-                var openId = int.Parse(commandArgs[1]);
-                var openType = commandArgs[2];
-                var openLength = int.Parse(commandArgs[3]);
-                var openRoute = commandArgs[4];
-                var openPrize = int.Parse(commandArgs[5]);
-                Manager.Open(openId, openType, openLength, openRoute, openPrize);
-                break;
+                if (commandArgs.Length == 6)
+                {
+                    var openId = int.Parse(commandArgs[1]);
+                    var openType = commandArgs[2];
+                    var openLength = int.Parse(commandArgs[3]);
+                    var openRoute = commandArgs[4];
+                    var openPrize = int.Parse(commandArgs[5]);
+                    Manager.Open(openId, openType, openLength, openRoute, openPrize);
+                    break;
+                }
+                else
+                {
+                    var openId = int.Parse(commandArgs[1]);
+                    var openType = commandArgs[2];
+                    var openLength = int.Parse(commandArgs[3]);
+                    var openRoute = commandArgs[4];
+                    var openPrize = int.Parse(commandArgs[5]);
+                    var openGoldTime = int.Parse(commandArgs[6]);
+                    Manager.Open(openId, openType, openLength, openRoute, openPrize, openGoldTime);
+                    break;
+                }
             case "participate":
                 var carId = int.Parse(commandArgs[1]);
                 var raceId = int.Parse(commandArgs[2]);

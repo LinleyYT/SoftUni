@@ -61,6 +61,16 @@ public class CarManager
         }
     }
 
+    public void Open(int id, string type, int length, string route, int prizePool, int goldTime)
+    {
+        var raceFactory = new RaceFactory();
+        var producedRace = raceFactory.CreateRace(type, length, route, prizePool, goldTime);
+        if (producedRace != null)
+        {
+            this.Races.Add(id, producedRace);
+        }
+    }
+
     public void Participate(int carId, int raceId)
     {
         Race currentRace = this.Races[raceId];

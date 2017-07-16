@@ -14,5 +14,15 @@
                 return null;
         }
     }
+
+    public Race CreateRace(string type, int length, string route, int prizePool, int goldTime)
+    {
+        if (type == "TimeLimit")
+        {
+            return new TimeLimitRace(length, route, prizePool, goldTime);
+        }
+
+        return null;
+    }
 }
 

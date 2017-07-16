@@ -49,7 +49,7 @@ public abstract class Race
         protected set { this.length = value; }
     }
 
-    public void AddParticipant(Car participant)
+    public virtual void AddParticipant(Car participant)
     {
         this.Participants.Add(participant);
     }
