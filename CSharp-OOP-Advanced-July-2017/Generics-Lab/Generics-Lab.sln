@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Box", "01.Box\01.Box.csproj", "{EA63BD20-60FE-45C4-B0AC-2B9286F1AC61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.ArrayCreator", "02.ArrayCreator\02.ArrayCreator.csproj", "{4AF681CB-6A8F-49FA-B699-979713AB0C38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Scale", "03.Scale\03.Scale.csproj", "{D0B5F404-696C-4295-95A8-9CFC175EECEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA63BD20-60FE-45C4-B0AC-2B9286F1AC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA63BD20-60FE-45C4-B0AC-2B9286F1AC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA63BD20-60FE-45C4-B0AC-2B9286F1AC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA63BD20-60FE-45C4-B0AC-2B9286F1AC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF681CB-6A8F-49FA-B699-979713AB0C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF681CB-6A8F-49FA-B699-979713AB0C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF681CB-6A8F-49FA-B699-979713AB0C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF681CB-6A8F-49FA-B699-979713AB0C38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B5F404-696C-4295-95A8-9CFC175EECEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B5F404-696C-4295-95A8-9CFC175EECEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B5F404-696C-4295-95A8-9CFC175EECEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B5F404-696C-4295-95A8-9CFC175EECEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
