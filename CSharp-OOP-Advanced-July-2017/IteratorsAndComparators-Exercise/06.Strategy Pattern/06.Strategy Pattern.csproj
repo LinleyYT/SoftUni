@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7B7391E3-D33A-4996-B975-2B9B3E1A7BFF}</ProjectGuid>
+    <ProjectGuid>{2120CD93-6A55-4F98-9A6D-7C729B551B57}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_05.ComparingObjects</RootNamespace>
-    <AssemblyName>05.ComparingObjects</AssemblyName>
+    <RootNamespace>_06.Strategy_Pattern</RootNamespace>
+    <AssemblyName>06.Strategy Pattern</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPerson.cs" />
+    <Compile Include="Comparators\AgeComparer.cs" />
+    <Compile Include="Comparators\NameComparator.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="StartUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -50,5 +51,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
