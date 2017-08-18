@@ -6,11 +6,13 @@ namespace _01.Card_Suit
 {
     public class Deck : IEnumerable<Card>
     {
-        public Deck()
+        public Deck(string name)
         {
             this.DeckOfCards = new List<Card>();
+            this.Name = name;
         }
 
+        public string Name { get; private set; }
         public List<Card> DeckOfCards { get; private set; }
 
         public void AddCard(Card card)

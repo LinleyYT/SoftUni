@@ -20,7 +20,7 @@ namespace _01.Card_Suit
 
         public override string ToString()
         {
-            return $"Card name: {this.Rank} of {this.Suit}; Card power: {this.Power()}";
+            return $"{this.Rank} of {this.Suit}";
         }
 
         public int CompareTo(Card other)
