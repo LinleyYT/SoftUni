@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 public class BankAccount
 {
@@ -45,4 +40,3 @@ public class BankAccount
         return $"Account ID{this.ID}, balance {this.Balance:F2}";
     }
 }
-

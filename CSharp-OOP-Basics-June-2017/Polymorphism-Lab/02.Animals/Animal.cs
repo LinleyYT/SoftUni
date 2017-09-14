@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-public class Animal
+﻿public class Animal
 {
     private string name;
     private string favouriteFood;
@@ -27,4 +20,3 @@ public class Animal
         return $"I am {this.Name} and my fovourite food is {this.FavouriteFood}";
     }
 }
-

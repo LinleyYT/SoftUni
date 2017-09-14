@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _04.ShoppingSpree
 {
@@ -40,6 +37,7 @@ namespace _04.ShoppingSpree
         }
 
         private IList<Product> products;
+
         public IList<Product> Products
         {
             get { return this.products; }
@@ -52,7 +50,6 @@ namespace _04.ShoppingSpree
             this.Money = money;
             this.products = new List<Product>();
         }
-
 
         public void AddProduct(Product product, decimal cost)
         {

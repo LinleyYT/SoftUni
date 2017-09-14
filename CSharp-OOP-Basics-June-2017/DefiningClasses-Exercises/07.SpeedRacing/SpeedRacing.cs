@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _07.SpeedRacing
 {
@@ -37,7 +35,7 @@ namespace _07.SpeedRacing
 
             while (command != "End")
             {
-                var commandArgs = command.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var commandArgs = command.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
                 var carModel = commandArgs[1];
                 var km = double.Parse(commandArgs[2]);
 

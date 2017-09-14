@@ -1,6 +1,6 @@
 ﻿public class AirMonument : Monument
 {
-    public AirMonument(string name, int airAffinity) 
+    public AirMonument(string name, int airAffinity)
         : base(name)
     {
         this.AirAffinity = airAffinity;
@@ -24,4 +24,3 @@
         return this.AirAffinity;
     }
 }
-

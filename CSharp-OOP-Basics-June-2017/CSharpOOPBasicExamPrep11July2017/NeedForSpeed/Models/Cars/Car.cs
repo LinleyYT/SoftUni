@@ -1,6 +1,7 @@
 ﻿public abstract class Car
 {
-    public Car(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension, int durability)
+    public Car(string brand, string model, int yearOfProduction, int horsepower, int acceleration, int suspension,
+        int durability)
     {
         this.Brand = brand;
         this.Model = model;
@@ -66,7 +67,4 @@
         this.Horsepower += tuneIndex;
         this.Suspension += tuneIndex / 2;
     }
-    
 }
-
-

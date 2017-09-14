@@ -12,15 +12,18 @@ public class MonumentFactory
         {
             case "Air":
                 return new AirMonument(name, affinity);
+
             case "Water":
                 return new WaterMonument(name, affinity);
+
             case "Fire":
                 return new FireMonument(name, affinity);
+
             case "Earth":
                 return new EarthMonument(name, affinity);
+
             default:
                 return null;
         }
     }
 }
-

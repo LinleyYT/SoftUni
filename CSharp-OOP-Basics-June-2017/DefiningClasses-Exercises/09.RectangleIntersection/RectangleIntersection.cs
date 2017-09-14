@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _09.RectangleIntersection
 {
@@ -26,7 +24,7 @@ namespace _09.RectangleIntersection
                 var id = rectangleSpecs[0];
                 var width = double.Parse(rectangleSpecs[1]);
                 var height = double.Parse(rectangleSpecs[2]);
-                var coords = new double[2] { double.Parse(rectangleSpecs[3]), double.Parse(rectangleSpecs[4])};
+                var coords = new double[2] {double.Parse(rectangleSpecs[3]), double.Parse(rectangleSpecs[4])};
 
                 var currentRect = new Rectangle(id, width, height, coords);
                 rectangles.Add(currentRect);
@@ -35,7 +33,7 @@ namespace _09.RectangleIntersection
             for (int i = 0; i < m; i++)
             {
                 var IDs = Console.ReadLine().Trim()
-                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    .Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
                 var firstID = IDs[0];
                 var secondID = IDs[1];
 

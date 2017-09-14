@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _06.Animals
 {
@@ -18,7 +16,7 @@ namespace _06.Animals
                 try
                 {
                     var animalType = input;
-                    var animalArgs = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    var animalArgs = Console.ReadLine().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
                     if (animalArgs.Length < 3 || animalArgs.Any(String.IsNullOrWhiteSpace))
                     {
@@ -56,14 +54,19 @@ namespace _06.Animals
             {
                 case "Dog":
                     return new Dog(name, age, gender);
+
                 case "Cat":
                     return new Cat(name, age, gender);
+
                 case "Frog":
                     return new Frog(name, age, gender);
+
                 case "Kittens":
                     return new Kitten(name, age, gender);
+
                 case "Tomcat":
                     return new Tomcat(name, age, gender);
+
                 default:
                     return null;
             }

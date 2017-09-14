@@ -13,15 +13,18 @@ public class BenderFactory
         {
             case "Air":
                 return new AirBender(name, power, typeSpecialty);
+
             case "Water":
                 return new WaterBender(name, power, typeSpecialty);
+
             case "Fire":
                 return new FireBender(name, power, typeSpecialty);
+
             case "Earth":
                 return new EarthBender(name, power, typeSpecialty);
+
             default:
                 return null;
         }
     }
 }
-

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _03.ValidationData
 {
@@ -32,7 +29,6 @@ namespace _03.ValidationData
             var bonus = double.Parse(Console.ReadLine());
             persons.ForEach(p => p.IncreaseSalary(bonus));
             persons.ForEach(p => Console.WriteLine(p.ToString()));
-
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿public class FireBender : Bender
 {
-    public FireBender(string name, int power, double heatAggression) 
+    public FireBender(string name, int power, double heatAggression)
         : base(name, power)
     {
         this.HeatAggression = heatAggression;
@@ -24,4 +24,3 @@
         return this.Power * this.HeatAggression;
     }
 }
-

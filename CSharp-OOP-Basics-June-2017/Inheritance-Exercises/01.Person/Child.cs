@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace _01.Person
 {
@@ -15,14 +14,12 @@ namespace _01.Person
             get { return base.Age; }
             protected set
             {
-                if (value >= 15 )
+                if (value >= 15)
                 {
                     throw new ArgumentException("Child's age must be less than 15!");
                 }
                 base.Age = value;
             }
         }
-
-        
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _11.PokemonTrainer
 {
@@ -21,7 +19,6 @@ namespace _11.PokemonTrainer
                 var element = inputArgs[2];
                 var health = double.Parse(inputArgs[3]);
 
-                
                 var pokemon = new Pokemon(pokemonName, element, health);
 
                 if (trainers.All(x => x.Name != player))
@@ -70,6 +67,7 @@ namespace _11.PokemonTrainer
             {
                 Console.WriteLine($"{trainer.Name} {trainer.Badges} {trainer.Pokemons.Count(x => x.Health > 0)}");
             }
-;        }
+            ;
+        }
     }
 }

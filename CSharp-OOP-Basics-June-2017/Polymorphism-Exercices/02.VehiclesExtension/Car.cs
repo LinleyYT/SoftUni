@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _02.VehiclesExtension
+﻿namespace _02.VehiclesExtension
 {
     public class Car : Vehicle
     {
@@ -17,6 +11,5 @@ namespace _02.VehiclesExtension
         }
 
         private const double ConsumptionMod = 0.9;
-
     }
 }

@@ -3,7 +3,7 @@ using System.Text;
 
 public abstract class Provider : SystemAll
 {
-    protected Provider(string id, double energyOutput) 
+    protected Provider(string id, double energyOutput)
         : base(id)
     {
         this.Id = id;

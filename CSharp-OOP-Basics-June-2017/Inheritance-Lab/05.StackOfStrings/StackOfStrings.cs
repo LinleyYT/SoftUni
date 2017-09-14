@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 
 public class StackOfStrings : Stack<string>
 {
@@ -16,7 +11,6 @@ public class StackOfStrings : Stack<string>
 
     public void Push(string item)
     {
-        
     }
 
     public string Pop()
@@ -34,4 +28,3 @@ public class StackOfStrings : Stack<string>
         return true;
     }
 }
-

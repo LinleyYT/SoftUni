@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace _03.Wild_farm
+﻿namespace _03.Wild_farm
 {
     public abstract class Mammal : Animal
     {

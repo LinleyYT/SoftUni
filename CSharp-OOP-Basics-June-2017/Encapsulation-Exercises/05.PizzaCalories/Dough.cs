@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _05.PizzaCalories
 {
@@ -24,7 +20,7 @@ namespace _05.PizzaCalories
             {
                 if (value != "white" && value != "wholegrain")
                 {
-                   throw new ArgumentException("Invalid type of dough.");
+                    throw new ArgumentException("Invalid type of dough.");
                 }
 
                 this.flourType = value;
@@ -63,7 +59,6 @@ namespace _05.PizzaCalories
             }
         }
 
-
         private double flourTypeMod;
         private double doughTechMod;
 
@@ -74,19 +69,22 @@ namespace _05.PizzaCalories
                 case "white":
                     this.flourTypeMod = 1.5;
                     break;
+
                 case "wholegrain":
                     this.flourTypeMod = 1.0;
                     break;
             }
-            
+
             switch (this.BakingTech)
             {
                 case "crispy":
                     this.doughTechMod = 0.9;
                     break;
+
                 case "chewy":
                     this.doughTechMod = 1.1;
                     break;
+
                 case "homemade":
                     this.doughTechMod = 1.0;
                     break;
@@ -95,8 +93,5 @@ namespace _05.PizzaCalories
             var calsPerGram = 2 * this.Weight * this.flourTypeMod * this.doughTechMod;
             return calsPerGram;
         }
-
-
     }
-
 }

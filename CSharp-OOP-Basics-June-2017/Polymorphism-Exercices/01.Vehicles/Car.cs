@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace _01.Vehicles
+﻿namespace _01.Vehicles
 {
     public class Car : Vehicle
     {
@@ -12,6 +10,5 @@ namespace _01.Vehicles
         }
 
         private const double ConsumptionMod = 0.9;
-
     }
 }

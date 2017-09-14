@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace _12.Google
 {
@@ -27,7 +23,7 @@ namespace _12.Google
             get { return this.children; }
             set { this.children = value; }
         }
-        
+
         private List<Pokemon> pokemons = new List<Pokemon>();
 
         public List<Pokemon> Pokemons
@@ -35,7 +31,5 @@ namespace _12.Google
             get { return this.pokemons; }
             set { this.pokemons = value; }
         }
-
-
     }
 }

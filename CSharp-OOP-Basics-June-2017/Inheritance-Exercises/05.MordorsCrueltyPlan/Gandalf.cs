@@ -1,10 +1,7 @@
-﻿using System;
+﻿using _05.MordorsCrueltyPlan.FoodModels;
+using _05.MordorsCrueltyPlan.MoodModels;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using _05.MordorsCrueltyPlan.FoodModels;
-using _05.MordorsCrueltyPlan.MoodModels;
 
 namespace _05.MordorsCrueltyPlan
 {
@@ -26,7 +23,7 @@ namespace _05.MordorsCrueltyPlan
         }
 
         private Mood mood;
-        MoodFactory moodF = new MoodFactory();
+        private MoodFactory moodF = new MoodFactory();
         private int points;
 
         private int GetPoints(List<Food> foods)

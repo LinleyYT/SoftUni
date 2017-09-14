@@ -26,4 +26,3 @@ public class Nation
         this.AllBenders = this.AllBenders.Where(x => x.GetType().Name.Contains(winner)).ToList();
     }
 }
-

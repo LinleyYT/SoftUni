@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _08.RawData
 {
@@ -30,8 +28,8 @@ namespace _08.RawData
                 var pressureFour = double.Parse(inputArgs[11]);
                 var ageFour = int.Parse(inputArgs[12]);
 
-                var tirePressure = new double[4] { pressureOne, pressureTwo, pressureThree, pressureFour };
-                var tireAge = new int[4] { ageOne, ageTwo, ageThree, ageFour };
+                var tirePressure = new double[4] {pressureOne, pressureTwo, pressureThree, pressureFour};
+                var tireAge = new int[4] {ageOne, ageTwo, ageThree, ageFour};
 
                 var engine = new Engine(engineSpeed, enginePower);
                 var cargo = new Cargo(weight, type);
@@ -45,14 +43,16 @@ namespace _08.RawData
 
             if (command == "fragile")
             {
-                foreach (var car in carList.Where(x => x.Cargo.Type == "fragile").Where(x => x.TireSpecs.TirePressure.Any(t => t < 1)))
+                foreach (var car in carList.Where(x => x.Cargo.Type == "fragile")
+                    .Where(x => x.TireSpecs.TirePressure.Any(t => t < 1)))
                 {
                     Console.WriteLine(car.Model);
                 }
             }
             else if (command == "flamable")
             {
-                foreach (var car in carList.Where(x => x.Cargo.Type == "flamable").Where(x => x.Engine.EnginePower > 250))
+                foreach (var car in carList.Where(x => x.Cargo.Type == "flamable")
+                    .Where(x => x.Engine.EnginePower > 250))
                 {
                     Console.WriteLine(car.Model);
                 }

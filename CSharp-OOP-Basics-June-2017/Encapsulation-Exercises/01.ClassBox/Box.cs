@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _01.ClassBox
 {
@@ -11,7 +7,6 @@ namespace _01.ClassBox
         private double length;
         private double width;
         private double height;
-        
 
         public Box(double length, double width, double height)
         {
@@ -39,6 +34,5 @@ namespace _01.ClassBox
             var volume = this.length * this.width * this.height;
             Console.WriteLine($"Volume - {volume:F2}");
         }
-
     }
 }

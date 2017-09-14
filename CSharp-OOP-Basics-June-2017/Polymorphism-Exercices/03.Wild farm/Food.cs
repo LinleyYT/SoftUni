@@ -14,7 +14,5 @@
             get { return this.foodQuantity; }
             protected set { this.foodQuantity = value; }
         }
-
-        
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02.ClassBoxDataValidation
 {
@@ -11,7 +7,6 @@ namespace _02.ClassBoxDataValidation
         private double length;
         private double width;
         private double height;
-
 
         public Box(double length, double width, double height)
         {
@@ -78,6 +73,5 @@ namespace _02.ClassBoxDataValidation
             var volume = this.Length * this.Width * this.Height;
             Console.WriteLine($"Volume - {volume:F2}");
         }
-
     }
 }

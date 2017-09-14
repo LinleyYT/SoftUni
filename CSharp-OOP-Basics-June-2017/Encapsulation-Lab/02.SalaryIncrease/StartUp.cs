@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02.SalaryIncrease
 {
@@ -25,7 +22,6 @@ namespace _02.SalaryIncrease
             var bonus = double.Parse(Console.ReadLine());
             persons.ForEach(p => p.IncreaseSalary(bonus));
             persons.ForEach(p => Console.WriteLine(p.ToString()));
-
         }
     }
 }

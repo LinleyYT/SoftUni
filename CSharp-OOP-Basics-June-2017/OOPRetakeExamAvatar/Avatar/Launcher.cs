@@ -1,9 +1,8 @@
 ﻿public class Launcher
 {
-    static void Main()
+    private static void Main()
     {
         var commandInterpreter = new CommandInterpreter();
         commandInterpreter.Run();
     }
 }
-

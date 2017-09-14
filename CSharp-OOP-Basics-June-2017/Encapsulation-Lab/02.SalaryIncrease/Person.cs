@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-public class Person
+﻿public class Person
 {
     private string firstName;
     private string lastName;
@@ -24,6 +18,7 @@ public class Person
         get { return this.firstName; }
         set { this.firstName = value; }
     }
+
     public string LastName
     {
         get { return this.lastName; }
@@ -35,6 +30,7 @@ public class Person
         get { return this.age; }
         set { this.age = value; }
     }
+
     public double Salary
     {
         get { return this.salary; }

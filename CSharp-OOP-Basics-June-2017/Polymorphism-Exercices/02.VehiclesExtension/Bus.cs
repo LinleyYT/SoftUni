@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02.VehiclesExtension
 {
     public class Bus : Vehicle
     {
-        public Bus(double fuelQuantity, double fuelConsumption, double capacity) 
+        public Bus(double fuelQuantity, double fuelConsumption, double capacity)
             : base(fuelQuantity, fuelConsumption, capacity)
         {
             this.FuelQuantity = fuelQuantity;
@@ -28,6 +24,7 @@ namespace _02.VehiclesExtension
             this.FuelQuantity -= distance * this.FuelConsumption;
             Console.WriteLine($"{this.GetType().Name} travelled {distance} km");
         }
+
         public override void Drive(double distance)
         {
             if (this.FuelQuantity - distance * (this.FuelConsumption + BusConsumptionMod) < 0)

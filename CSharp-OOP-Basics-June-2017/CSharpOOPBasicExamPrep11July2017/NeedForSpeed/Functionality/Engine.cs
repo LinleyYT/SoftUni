@@ -9,7 +9,11 @@ public class Engine
 
     private CarManager manager;
 
-    public CarManager Manager { get => manager; set => manager = value; }
+    public CarManager Manager
+    {
+        get => manager;
+        set => manager = value;
+    }
 
     public void Run()
     {
@@ -17,7 +21,7 @@ public class Engine
 
         while ((input = Console.ReadLine()) != "Cops Are Here")
         {
-            var commandArgs = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var commandArgs = input.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             ExecuteCommand(commandArgs);
         }
     }
@@ -25,7 +29,6 @@ public class Engine
     private void ExecuteCommand(string[] commandArgs)
     {
         var command = commandArgs[0];
-
 
         switch (command)
         {
@@ -39,12 +42,15 @@ public class Engine
                 var acceleration = int.Parse(commandArgs[7]);
                 var suspension = int.Parse(commandArgs[8]);
                 var durability = int.Parse(commandArgs[9]);
-                Manager.Register(id, type, brand, model, yearOfProduction, horsepower, acceleration, suspension, durability);
+                Manager.Register(id, type, brand, model, yearOfProduction, horsepower, acceleration, suspension,
+                    durability);
                 break;
+
             case "check":
                 var checkId = int.Parse(commandArgs[1]);
                 Console.WriteLine(Manager.Check(checkId));
                 break;
+
             case "open":
                 if (commandArgs.Length == 6)
                 {
@@ -72,18 +78,22 @@ public class Engine
                 var raceId = int.Parse(commandArgs[2]);
                 Manager.Participate(carId, raceId);
                 break;
+
             case "start":
                 var startRaceId = int.Parse(commandArgs[1]);
                 Console.WriteLine(Manager.Start(startRaceId));
                 break;
+
             case "park":
                 var parkCarId = int.Parse(commandArgs[1]);
                 Manager.Park(parkCarId);
                 break;
+
             case "unpark":
                 var unparkCarId = int.Parse(commandArgs[1]);
                 Manager.Unpark(unparkCarId);
                 break;
+
             case "tune":
                 var tuneIndex = int.Parse(commandArgs[1]);
                 var tuneAddOn = commandArgs[2];
@@ -92,4 +102,3 @@ public class Engine
         }
     }
 }
-

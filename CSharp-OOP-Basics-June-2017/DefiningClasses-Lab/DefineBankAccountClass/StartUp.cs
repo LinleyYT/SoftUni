@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 public class StartUp
 {
@@ -27,12 +23,15 @@ public class StartUp
                 case "Create":
                     Create(cmdArgs, accounts);
                     break;
+
                 case "Deposit":
                     Deposit(cmdArgs, accounts);
                     break;
+
                 case "Withdraw":
                     Withdraw(cmdArgs, accounts);
                     break;
+
                 case "Print":
                     Print(cmdArgs, accounts);
                     break;
@@ -65,7 +64,6 @@ public class StartUp
         {
             Console.WriteLine("Account does not exist");
         }
-
         else
         {
             if (amount > accounts[id].Balance)
@@ -77,7 +75,6 @@ public class StartUp
                 accounts[id].Withdraw(amount);
             }
         }
-
     }
 
     private static void Deposit(string[] cmdArgs, Dictionary<int, BankAccount> accounts)
@@ -111,4 +108,3 @@ public class StartUp
         }
     }
 }
-

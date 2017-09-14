@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _11.PokemonTrainer
+﻿namespace _11.PokemonTrainer
 {
     public class Pokemon
     {
@@ -16,10 +10,8 @@ namespace _11.PokemonTrainer
         public double Health
         {
             get { return this.health; }
-            set {  this.health = value; }
+            set { this.health = value; }
         }
-
-        
 
         public Pokemon(string name, string element, double health)
         {

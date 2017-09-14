@@ -1,10 +1,8 @@
-﻿using System;
+﻿using _04.OnlineRadioDatabase.ExceptionHierarchy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using _04.OnlineRadioDatabase.ExceptionHierarchy;
 
 namespace _04.OnlineRadioDatabase
 {
@@ -22,7 +20,7 @@ namespace _04.OnlineRadioDatabase
                 {
                     var songArgs = Console.ReadLine()
                         .Trim()
-                        .Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries)
+                        .Split(new[] {';'}, StringSplitOptions.RemoveEmptyEntries)
                         .Select(x => x.Trim())
                         .ToArray();
 
@@ -32,7 +30,7 @@ namespace _04.OnlineRadioDatabase
                     var match = Regex.Match(songArgs[2], "^([0-9]+):([0-9]+)$");
                     if (!match.Success)
                     {
-                       throw new InvalidSongLengthException();
+                        throw new InvalidSongLengthException();
                     }
                     var songLengthArgs = songArgs[2].Split(':');
                     var minutes = songLengthArgs[0];
@@ -46,12 +44,12 @@ namespace _04.OnlineRadioDatabase
                 {
                     Console.WriteLine(e.Message);
                 }
-
             }
 
             var totalSongTime = new TimeSpan(songDb.Sum(x => x.SongLength.Ticks));
             Console.WriteLine($"Songs added: {songDb.Count}");
-            Console.WriteLine($"Playlist length: {totalSongTime.Hours}h {totalSongTime.Minutes}m {totalSongTime.Seconds}s");
+            Console.WriteLine(
+                $"Playlist length: {totalSongTime.Hours}h {totalSongTime.Minutes}m {totalSongTime.Seconds}s");
         }
     }
 }

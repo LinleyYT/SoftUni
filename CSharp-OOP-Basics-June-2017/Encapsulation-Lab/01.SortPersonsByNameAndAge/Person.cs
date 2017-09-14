@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-public class Person
+﻿public class Person
 {
     private string firstName;
     private string lastName;
@@ -22,6 +15,7 @@ public class Person
     {
         get { return this.firstName; }
     }
+
     public string LastName
     {
         get { return this.lastName; }
@@ -37,4 +31,3 @@ public class Person
         return $"{this.firstName} {this.lastName} is a {this.age} years old";
     }
 }
-

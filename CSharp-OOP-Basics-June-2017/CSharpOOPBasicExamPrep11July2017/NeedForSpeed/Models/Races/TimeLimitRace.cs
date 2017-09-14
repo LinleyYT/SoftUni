@@ -5,7 +5,7 @@ using System.Text;
 public class TimeLimitRace : Race
 {
     public TimeLimitRace(int length, string route, int prizePool, int goldTime)
-    : base(length, route, prizePool)
+        : base(length, route, prizePool)
     {
         this.GoldTime = goldTime;
     }
@@ -24,13 +24,13 @@ public class TimeLimitRace : Race
         var badge = String.Empty;
         var sb = new StringBuilder();
         sb.AppendLine($"{this.Route} - {this.Length}");
-        sb.AppendLine($"{this.Participants.FirstOrDefault().Brand} {this.Participants.FirstOrDefault().Model} - {timePerformance} s.");
+        sb.AppendLine(
+            $"{this.Participants.FirstOrDefault().Brand} {this.Participants.FirstOrDefault().Model} - {timePerformance} s.");
 
         if (timePerformance <= this.GoldTime)
         {
             badge = "Gold";
             sb.AppendLine($"{badge} Time, ${this.PrizePool}.");
-
         }
         else if (timePerformance <= this.GoldTime + 15)
         {
@@ -62,4 +62,3 @@ public class TimeLimitRace : Race
         }
     }
 }
-

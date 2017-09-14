@@ -30,4 +30,3 @@ public class Circle : Shape
         return base.Draw() + "Circle";
     }
 }
-

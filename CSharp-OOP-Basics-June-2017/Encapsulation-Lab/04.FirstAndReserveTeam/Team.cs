@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿using System.Collections.Generic;
 
 public class Team
 {
@@ -22,6 +17,7 @@ public class Team
     {
         get { return this.firstTeam.AsReadOnly(); }
     }
+
     public IReadOnlyCollection<Person> ReserveTeam
     {
         get { return this.reserveTeam.AsReadOnly(); }
@@ -39,4 +35,3 @@ public class Team
         }
     }
 }
-

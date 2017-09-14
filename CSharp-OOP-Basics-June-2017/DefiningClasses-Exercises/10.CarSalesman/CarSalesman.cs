@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _10.CarSalesman
 {
-    class CarSalesman
+    internal class CarSalesman
     {
         public static void Main()
         {
@@ -46,7 +44,7 @@ namespace _10.CarSalesman
 
             for (int i = 0; i < m; i++)
             {
-                var carSpecs = Console.ReadLine().Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                var carSpecs = Console.ReadLine().Trim().Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
                 var model = carSpecs[0];
                 var engineModel = carSpecs[1];

@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Text;
 
 namespace _01.Person
@@ -53,6 +52,5 @@ namespace _01.Person
 
             return stringBuilder.ToString();
         }
-
     }
 }

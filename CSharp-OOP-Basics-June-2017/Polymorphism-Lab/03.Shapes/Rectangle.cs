@@ -14,7 +14,7 @@
         get { return this.width; }
         private set { this.width = value; }
     }
-    
+
     public double Height
     {
         get { return this.height; }
@@ -36,4 +36,3 @@
         return base.Draw() + "Rectangle";
     }
 }
-

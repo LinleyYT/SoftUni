@@ -1,7 +1,7 @@
 ﻿public class FireMonument : Monument
 {
     public FireMonument(string name, int fireAffinity)
-    : base(name)
+        : base(name)
     {
         this.FireAffinity = fireAffinity;
     }
@@ -24,4 +24,3 @@
         return this.FireAffinity;
     }
 }
-

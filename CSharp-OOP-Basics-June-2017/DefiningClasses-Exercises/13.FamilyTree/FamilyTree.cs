@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace _13.FamilyTree
 {
     public class FamilyTree
     {
-
         public static void Main()
         {
             var allPeople = new List<Person>();
@@ -123,7 +121,6 @@ namespace _13.FamilyTree
             Console.WriteLine(result);
         }
 
-
         private static void AddParentIfMissing(List<Person> allPeople, Person parent)
         {
             if (parent.Name != null && allPeople.Any(p => p.Name == parent.Name))
@@ -138,6 +135,5 @@ namespace _13.FamilyTree
 
             allPeople.Add(parent);
         }
-        
     }
 }

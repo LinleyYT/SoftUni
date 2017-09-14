@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02.VehiclesExtension
 {
@@ -22,12 +18,9 @@ namespace _02.VehiclesExtension
         protected double TankCapacity
         {
             get { return this.tankCapacity; }
-            set
-            {
-                this.tankCapacity = value;
-            }
+            set { this.tankCapacity = value; }
         }
-        
+
         protected double FuelConsumption
         {
             get { return this.fuelConsumption; }
@@ -70,6 +63,7 @@ namespace _02.VehiclesExtension
             this.FuelQuantity -= distance * this.FuelConsumption;
             Console.WriteLine($"{this.GetType().Name} travelled {distance} km");
         }
+
         public virtual void Drive(double distance, string command)
         {
             if (this.FuelQuantity - distance * this.FuelConsumption < 0)

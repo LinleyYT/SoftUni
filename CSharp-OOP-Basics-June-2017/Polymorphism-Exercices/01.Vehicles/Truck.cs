@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace _01.Vehicles
+﻿namespace _01.Vehicles
 {
     public class Truck : Vehicle
     {
-        public Truck(double fuelQuantity, double fuelConsumption) 
+        public Truck(double fuelQuantity, double fuelConsumption)
             : base(fuelQuantity, fuelConsumption)
         {
             this.FuelQuantity = fuelQuantity;

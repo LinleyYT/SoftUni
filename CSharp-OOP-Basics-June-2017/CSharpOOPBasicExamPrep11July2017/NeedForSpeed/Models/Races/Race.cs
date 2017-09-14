@@ -67,7 +67,6 @@ public abstract class Race
     }
 
     public abstract string StartRace();
+
     public abstract int CalculatePerformancePoints(Car participant);
 }
-
-

@@ -13,4 +13,3 @@ public class Dog : Animal
         return base.ExplainMyself() + Environment.NewLine + "DJAAF";
     }
 }
-

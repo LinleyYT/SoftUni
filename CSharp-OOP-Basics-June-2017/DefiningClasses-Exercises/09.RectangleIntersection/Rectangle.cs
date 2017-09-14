@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _09.RectangleIntersection
+﻿namespace _09.RectangleIntersection
 {
     public class Rectangle
     {
@@ -23,7 +17,10 @@ namespace _09.RectangleIntersection
 
         public bool RectangleIntersect(Rectangle rectangle)
         {
-            if (rectangle.Coordinates[0] <= this.Coordinates[0] + this.Width && rectangle.Coordinates[0] + rectangle.Width >= this.Coordinates[0] && rectangle.Coordinates[1] <= this.Coordinates[1] + this.Height && rectangle.Coordinates[1] + rectangle.Height >= this.Coordinates[1])
+            if (rectangle.Coordinates[0] <= this.Coordinates[0] + this.Width &&
+                rectangle.Coordinates[0] + rectangle.Width >= this.Coordinates[0] &&
+                rectangle.Coordinates[1] <= this.Coordinates[1] + this.Height &&
+                rectangle.Coordinates[1] + rectangle.Height >= this.Coordinates[1])
             {
                 return true;
             }

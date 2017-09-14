@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _05.PizzaCalories
 {
@@ -46,7 +44,6 @@ namespace _05.PizzaCalories
             set { this.dough = value; }
         }
 
-
         public void AddTopping(Topping topping)
         {
             if (this.toppings.Count > 10)
@@ -65,6 +62,5 @@ namespace _05.PizzaCalories
             totalCalories += this.Toppings.Sum(x => x.GetCalories());
             return totalCalories;
         }
-        
     }
 }

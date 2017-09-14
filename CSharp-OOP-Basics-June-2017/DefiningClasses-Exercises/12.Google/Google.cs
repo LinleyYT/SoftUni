@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _12.Google
 {
@@ -31,16 +28,20 @@ namespace _12.Google
                         case "company":
                             person.Company = AddCompany(inputArgs);
                             break;
+
                         case "pokemon":
                             person.Pokemons = new List<Pokemon>();
                             person.Pokemons.Add(AddPokemon(inputArgs));
                             break;
+
                         case "parents":
                             person.Parents.Add(AddParents(inputArgs));
                             break;
+
                         case "children":
                             person.Children.Add(AddChildren(inputArgs));
                             break;
+
                         case "car":
                             person.Car = AddCar(inputArgs);
                             break;
@@ -55,15 +56,19 @@ namespace _12.Google
                         case "company":
                             setOfPeople.FirstOrDefault(x => x.Name == name).Company = AddCompany(inputArgs);
                             break;
+
                         case "pokemon":
                             setOfPeople.FirstOrDefault(x => x.Name == name).Pokemons.Add(AddPokemon(inputArgs));
                             break;
+
                         case "parents":
                             setOfPeople.FirstOrDefault(x => x.Name == name).Parents.Add(AddParents(inputArgs));
                             break;
+
                         case "children":
                             setOfPeople.FirstOrDefault(x => x.Name == name).Children.Add(AddChildren(inputArgs));
                             break;
+
                         case "car":
                             setOfPeople.FirstOrDefault(x => x.Name == name).Car = AddCar(inputArgs);
                             break;

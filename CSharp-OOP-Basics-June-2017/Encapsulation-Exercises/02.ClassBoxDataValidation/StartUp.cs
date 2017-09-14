@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _02.ClassBoxDataValidation
 {
@@ -30,8 +27,6 @@ namespace _02.ClassBoxDataValidation
             {
                 Console.WriteLine(e.Message);
             }
-
-            
         }
     }
 }

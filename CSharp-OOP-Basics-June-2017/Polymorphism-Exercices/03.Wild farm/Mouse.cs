@@ -4,7 +4,7 @@ namespace _03.Wild_farm
 {
     public class Mouse : Mammal
     {
-        public Mouse(string name, string type, double weight, string region) 
+        public Mouse(string name, string type, double weight, string region)
             : base(name, type, weight, region)
         {
             this.AnimalName = name;

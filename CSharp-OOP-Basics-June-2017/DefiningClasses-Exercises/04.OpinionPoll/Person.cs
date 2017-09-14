@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-public class Person
+﻿public class Person
 {
     private string name;
     private int age;
@@ -35,11 +28,9 @@ public class Person
     }
 
     public Person(string name, int age)
-        
+
     {
         this.name = name;
         this.age = age;
     }
-
 }
-

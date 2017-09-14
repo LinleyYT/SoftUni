@@ -2,7 +2,6 @@
 {
     public abstract class Food
     {
-        
         public Food(int happiness)
         {
             this.Happiness = happiness;
@@ -15,7 +14,5 @@
             get { return this.happiness; }
             set { this.happiness = value; }
         }
-
-        
     }
 }

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace _04.ShoppingSpree
 {
@@ -10,8 +9,8 @@ namespace _04.ShoppingSpree
     {
         public static void Main()
         {
-            var people = Console.ReadLine().Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-            var products = Console.ReadLine().Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            var people = Console.ReadLine().Split(new[] {';'}, StringSplitOptions.RemoveEmptyEntries);
+            var products = Console.ReadLine().Split(new[] {';'}, StringSplitOptions.RemoveEmptyEntries);
             var listOfPersons = new List<Person>();
             var listOfProducts = new List<Product>();
 
@@ -23,7 +22,6 @@ namespace _04.ShoppingSpree
                     var name = nameMoney[0];
                     var money = decimal.Parse(nameMoney[1]);
 
-
                     var currentPerson = new Person(name, money);
                     listOfPersons.Add(currentPerson);
                 }
@@ -34,10 +32,8 @@ namespace _04.ShoppingSpree
                     var name = nameCost[0];
                     var cost = decimal.Parse(nameCost[1]);
 
-
                     var currentProduct = new Product(name, cost);
                     listOfProducts.Add(currentProduct);
-
                 }
 
                 var command = Console.ReadLine();
@@ -84,7 +80,6 @@ namespace _04.ShoppingSpree
             }
             catch (NullReferenceException)
             {
-                
             }
         }
     }

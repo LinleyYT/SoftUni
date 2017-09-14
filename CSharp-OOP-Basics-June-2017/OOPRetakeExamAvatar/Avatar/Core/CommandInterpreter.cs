@@ -22,7 +22,7 @@ public class CommandInterpreter
 
         while ((input = Console.ReadLine()) != "Quit")
         {
-            var commandArgs = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var commandArgs = input.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             ExecuteCommand(commandArgs);
         }
 
@@ -39,14 +39,17 @@ public class CommandInterpreter
                 var requestedStatusType = commandArgs[1];
                 Console.WriteLine(NationsBuilder.GetStatus(requestedStatusType));
                 break;
+
             case "War":
                 var nationDeclaringWar = commandArgs[1];
                 NationsBuilder.IssueWar(nationDeclaringWar);
                 break;
+
             case "Bender":
                 var benderArgs = commandArgs.Skip(1).ToList();
                 NationsBuilder.AssignBender(benderArgs);
                 break;
+
             case "Monument":
                 var monumentArgs = commandArgs.Skip(1).ToList();
                 NationsBuilder.AssignMonument(monumentArgs);
@@ -54,4 +57,3 @@ public class CommandInterpreter
         }
     }
 }
-

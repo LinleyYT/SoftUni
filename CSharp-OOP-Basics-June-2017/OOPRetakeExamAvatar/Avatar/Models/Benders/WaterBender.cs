@@ -1,6 +1,6 @@
 ﻿public class WaterBender : Bender
 {
-    public WaterBender(string name, int power, double waterClarity) 
+    public WaterBender(string name, int power, double waterClarity)
         : base(name, power)
     {
         this.WaterClarity = waterClarity;
@@ -24,4 +24,3 @@
         return this.Power * this.WaterClarity;
     }
 }
-

@@ -1,10 +1,10 @@
 ﻿namespace P03_AnimalFarm
 {
+    using AnimalFarm.Models;
     using System;
     using System.Diagnostics;
     using System.Linq;
     using System.Reflection;
-    using AnimalFarm.Models;
 
     public class Program
     {
@@ -32,8 +32,6 @@
             {
                 Console.WriteLine(e.Message);
             }
-            
-            
         }
     }
 }

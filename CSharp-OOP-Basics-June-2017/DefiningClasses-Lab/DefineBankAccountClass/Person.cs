@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 public class Person
 {
@@ -29,4 +26,3 @@ public class Person
         return this.accounts.Sum(x => x.Balance);
     }
 }
-

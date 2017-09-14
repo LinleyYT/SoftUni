@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _05.MordorsCrueltyPlan.MoodModels
+﻿namespace _05.MordorsCrueltyPlan.MoodModels
 {
     public abstract class Mood
     {
@@ -25,6 +19,5 @@ namespace _05.MordorsCrueltyPlan.MoodModels
         {
             return $"{GetType().Name}";
         }
-
     }
 }

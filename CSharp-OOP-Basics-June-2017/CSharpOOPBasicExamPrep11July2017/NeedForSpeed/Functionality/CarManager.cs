@@ -32,8 +32,6 @@ public class CarManager
         set { this.cars = value; }
     }
 
-    
-
     public void Register(int id, string type, string brand, string model, int yearOfProduction,
         int horsepower, int acceleration, int suspension, int durability)
     {
@@ -92,9 +90,9 @@ public class CarManager
             return currentRace.StartRace().Trim();
         }
 
-        return $"{Race.NotEnoughParticipants}"; 
+        return $"{Race.NotEnoughParticipants}";
     }
-    
+
     public void Park(int id)
     {
         var carToPark = this.Cars[id];
@@ -127,4 +125,3 @@ public class CarManager
         this.Races.Remove(id);
     }
 }
-

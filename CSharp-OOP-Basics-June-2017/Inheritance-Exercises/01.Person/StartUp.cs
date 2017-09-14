@@ -18,7 +18,6 @@ namespace _01.Person
             {
                 Console.WriteLine(ae.Message);
             }
-
         }
     }
 }

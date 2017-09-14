@@ -13,6 +13,7 @@ public class DraftManager
         this.TotalMinedOre = 0;
         this.ModeState = "Full Mode";
     }
+
     private string modeState;
 
     public string ModeState
@@ -89,7 +90,6 @@ public class DraftManager
     {
         var sb = new StringBuilder();
 
-        
         var dailyEnergyOutput = this.AllProviders.Sum(x => x.EnergyOutput);
 
         var requiredEnergyForMining = 0.0;
@@ -107,6 +107,7 @@ public class DraftManager
                     DecreaseEnergyAfterProduction(requiredEnergyForMining);
                 }
                 break;
+
             case "Half Mode":
                 AddDayEnergyToTotal();
                 requiredEnergyForMining = (this.AllHarvesters.Sum(x => x.EnergyRequirement)) * 0.6;
@@ -117,6 +118,7 @@ public class DraftManager
                     DecreaseEnergyAfterProduction(requiredEnergyForMining);
                 }
                 break;
+
             case "Energy Mode":
                 AddDayEnergyToTotal();
                 break;
@@ -196,6 +198,4 @@ public class DraftManager
     {
         this.ModeState = mode;
     }
-
 }
-

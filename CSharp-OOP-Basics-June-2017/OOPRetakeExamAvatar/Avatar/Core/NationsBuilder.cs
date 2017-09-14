@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 
 public class NationsBuilder
@@ -28,7 +26,7 @@ public class NationsBuilder
         get { return this.allMonuments; }
         set { this.allMonuments = value; }
     }
-    
+
     public Nation Nation
     {
         get { return this.nation; }
@@ -41,18 +39,19 @@ public class NationsBuilder
         var bender = benderFactory.CreateBender(benderArgs);
         Nation.AddBender(bender);
     }
+
     public void AssignMonument(List<string> monumentArgs)
     {
         var monumentFactory = new MonumentFactory();
         var monument = monumentFactory.CreateMonument(monumentArgs);
         AddMonument(monument);
     }
+
     public string GetStatus(string nationsType)
     {
         var sb = new StringBuilder();
 
         sb.AppendLine($"{nationsType} Nation");
-      
 
         if (Nation.AllBenders.Where(x => x.GetType().Name == $"{nationsType}Bender").ToArray().Length == 0)
         {
@@ -81,6 +80,7 @@ public class NationsBuilder
 
         return sb.ToString().Trim();
     }
+
     public void IssueWar(string nationsType)
     {
         DeclaratorsOfWarQueue.Enqueue(nationsType);
@@ -128,15 +128,15 @@ public class NationsBuilder
                                          .Where(x => x.GetType().Name == "AirMonument")
                                          .Sum(y => y.CalculateMonumentPoints());
         winnerByType["EarthBender"] += (winnerByType["EarthBender"] / 100) * this.AllMonuments
-                                         .Where(x => x.GetType().Name == "EarthMonument")
-                                         .Sum(y => y.CalculateMonumentPoints());
-        winnerByType["FireBender"] += (winnerByType["FireBender"] / 100) * this.AllMonuments
-                                           .Where(x => x.GetType().Name == "FireMonument")
+                                           .Where(x => x.GetType().Name == "EarthMonument")
                                            .Sum(y => y.CalculateMonumentPoints());
-        winnerByType["WaterBender"] += (winnerByType["WaterBender"] / 100) * this.AllMonuments
-                                          .Where(x => x.GetType().Name == "WaterMonument")
+        winnerByType["FireBender"] += (winnerByType["FireBender"] / 100) * this.AllMonuments
+                                          .Where(x => x.GetType().Name == "FireMonument")
                                           .Sum(y => y.CalculateMonumentPoints());
- 
+        winnerByType["WaterBender"] += (winnerByType["WaterBender"] / 100) * this.AllMonuments
+                                           .Where(x => x.GetType().Name == "WaterMonument")
+                                           .Sum(y => y.CalculateMonumentPoints());
+
         var max = winnerByType.Aggregate((l, r) => l.Value > r.Value ? l : r).Key;
         return max;
     }
@@ -146,4 +146,3 @@ public class NationsBuilder
         this.AllMonuments = this.AllMonuments.Where(x => x.GetType().Name.Contains(type)).ToList();
     }
 }
-

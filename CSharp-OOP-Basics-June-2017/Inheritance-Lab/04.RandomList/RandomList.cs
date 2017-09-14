@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 public class RandomList : ArrayList
 {
@@ -22,7 +17,5 @@ public class RandomList : ArrayList
         string str = list[element].ToString();
         list.Remove(str);
         return str;
-
     }
 }
-

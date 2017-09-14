@@ -22,7 +22,7 @@ public class CommandInterpreter
 
         while ((input = Console.ReadLine()) != "Shutdown")
         {
-            var commandArgs = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            var commandArgs = input.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
             ExecuteCommand(commandArgs);
         }
 
@@ -39,17 +39,21 @@ public class CommandInterpreter
                 var registerHarvesterArgs = commandArgs.Skip(1).ToList();
                 Console.WriteLine(DraftManager.RegisterHarvester(registerHarvesterArgs));
                 break;
+
             case "RegisterProvider":
                 var registerProviderArgs = commandArgs.Skip(1).ToList();
                 Console.WriteLine(DraftManager.RegisterProvider(registerProviderArgs));
                 break;
+
             case "Day":
                 Console.WriteLine(DraftManager.Day());
                 break;
+
             case "Mode":
                 var modeArgs = commandArgs.Skip(1).ToList();
                 Console.WriteLine(DraftManager.Mode(modeArgs));
                 break;
+
             case "Check":
                 var checkArgs = commandArgs.Skip(1).ToList();
                 Console.WriteLine(DraftManager.Check(checkArgs));
@@ -57,4 +61,3 @@ public class CommandInterpreter
         }
     }
 }
-

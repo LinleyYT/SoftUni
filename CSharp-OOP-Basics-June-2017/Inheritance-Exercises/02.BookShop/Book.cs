@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace _02.BookShop
 {
-   public class Book
+    public class Book
     {
         public Book(string author, string title, decimal price)
         {
@@ -75,6 +72,5 @@ namespace _02.BookShop
 
             return sb.ToString();
         }
-
     }
 }

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _13.FamilyTree
 {
@@ -28,6 +25,7 @@ namespace _13.FamilyTree
         {
             get { return this.children.AsReadOnly(); }
         }
+
         public void AddChild(Person child)
         {
             this.children.Add(child);

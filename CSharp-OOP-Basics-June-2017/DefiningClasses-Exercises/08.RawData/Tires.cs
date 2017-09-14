@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _08.RawData
 {
@@ -11,7 +8,8 @@ namespace _08.RawData
         private double[] tirePressure = new double[4];
         private int[] tireAge = new int[4];
 
-        public double[] TirePressure {
+        public double[] TirePressure
+        {
             get { return this.tirePressure; }
             set
             {
@@ -23,7 +21,8 @@ namespace _08.RawData
                 {
                     Console.WriteLine("Invalid tire pressure");
                 }
-            } }
+            }
+        }
 
         public int[] Ints
         {

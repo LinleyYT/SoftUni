@@ -13,7 +13,4 @@
         get { return this.sonicFactor; }
         set { this.sonicFactor = value; }
     }
-
-    
 }
-

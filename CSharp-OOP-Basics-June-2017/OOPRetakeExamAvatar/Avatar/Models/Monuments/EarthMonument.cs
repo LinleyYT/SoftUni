@@ -1,7 +1,7 @@
 ﻿public class EarthMonument : Monument
 {
     public EarthMonument(string name, int earthAffinity)
-    : base(name)
+        : base(name)
     {
         this.EarthAffinity = earthAffinity;
     }
@@ -24,4 +24,3 @@
         return this.EarthAffinity;
     }
 }
-

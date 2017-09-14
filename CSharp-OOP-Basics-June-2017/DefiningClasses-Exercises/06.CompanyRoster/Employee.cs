@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-
-public class Employee
+﻿public class Employee
 {
     private int age = -1;
     private string email = "n/a";
@@ -34,6 +27,4 @@ public class Employee
         this.Position = position;
         this.Department = department;
     }
-
 }
-

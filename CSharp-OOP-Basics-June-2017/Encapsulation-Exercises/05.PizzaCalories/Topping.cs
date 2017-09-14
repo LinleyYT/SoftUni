@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _05.PizzaCalories
 {
@@ -55,12 +51,15 @@ namespace _05.PizzaCalories
                 case "meat":
                     typeMod = 1.2;
                     break;
+
                 case "veggies":
                     typeMod = 0.8;
                     break;
+
                 case "cheese":
                     typeMod = 1.1;
                     break;
+
                 case "sauce":
                     typeMod = 0.9;
                     break;
@@ -69,7 +68,7 @@ namespace _05.PizzaCalories
             return 2 * this.Weight * typeMod;
         }
 
-        static string UppercaseFirst(string s)
+        private static string UppercaseFirst(string s)
         {
             // Check for empty string.
             if (string.IsNullOrEmpty(s))

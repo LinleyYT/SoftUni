@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _05.PizzaCalories
 {
@@ -10,7 +7,6 @@ namespace _05.PizzaCalories
     {
         public static void Main()
         {
-
             string input;
 
             while ((input = Console.ReadLine()) != "END")
@@ -19,7 +15,6 @@ namespace _05.PizzaCalories
 
                 try
                 {
-                    
                     if (pizzaArgs[0] == "dough")
                     {
                         var doughCheck = new Dough(pizzaArgs[1], pizzaArgs[2], double.Parse(pizzaArgs[3]));
@@ -62,7 +57,6 @@ namespace _05.PizzaCalories
 
                         Console.WriteLine($"{pizza.Name} - {pizza.GetTotalCalories():F2} Calories.");
                     }
-                    
                 }
                 catch (Exception e)
                 {
@@ -70,11 +64,6 @@ namespace _05.PizzaCalories
                     return;
                 }
             }
-
-
-
-
-
         }
     }
 }

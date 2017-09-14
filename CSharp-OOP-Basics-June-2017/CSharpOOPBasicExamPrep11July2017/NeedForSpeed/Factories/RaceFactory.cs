@@ -6,10 +6,13 @@
         {
             case "casual":
                 return new CasualRace(length, route, prizePool);
+
             case "drag":
-                return  new DragRace(length, route, prizePool);
+                return new DragRace(length, route, prizePool);
+
             case "drift":
                 return new DriftRace(length, route, prizePool);
+
             default:
                 return null;
         }
@@ -25,4 +28,3 @@
         return null;
     }
 }
-

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _10.CarSalesman
 {
@@ -34,7 +30,8 @@ namespace _10.CarSalesman
 
         public override string ToString()
         {
-            return String.Format($"{this.Model}:\r\n  {this.Engine.Model}:\r\n    Power: {this.Engine.Power}\r\n    Displacement: {this.Engine.Displacement}\r\n    Efficiency: {this.Engine.Efficiency}\r\n  Weight: {this.Weight}\r\n  Color: {this.Color}");
+            return String.Format(
+                $"{this.Model}:\r\n  {this.Engine.Model}:\r\n    Power: {this.Engine.Power}\r\n    Displacement: {this.Engine.Displacement}\r\n    Efficiency: {this.Engine.Efficiency}\r\n  Weight: {this.Weight}\r\n  Color: {this.Color}");
         }
     }
 }

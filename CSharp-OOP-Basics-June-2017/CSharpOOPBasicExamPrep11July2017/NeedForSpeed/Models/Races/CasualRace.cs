@@ -4,7 +4,7 @@ using System.Text;
 
 public class CasualRace : Race
 {
-    public CasualRace(int length, string route, int prizePool) 
+    public CasualRace(int length, string route, int prizePool)
         : base(length, route, prizePool)
     {
     }
@@ -21,12 +21,13 @@ public class CasualRace : Race
         resultSb.AppendLine($"{this.Route} - {this.Length}");
         var counter = 1;
 
-        var winnerPercentages = new [] { 50, 30, 20 };
+        var winnerPercentages = new[] {50, 30, 20};
         var winnerPercentagesQueue = new Queue<int>(winnerPercentages);
 
         foreach (var kvp in this.Winners.OrderByDescending(x => x.Value).Take(3))
         {
-            resultSb.AppendLine($"{counter}. {kvp.Key.Brand} {kvp.Key.Model} {kvp.Value}PP - ${this.PrizePool * winnerPercentagesQueue.Dequeue() / 100}");
+            resultSb.AppendLine(
+                $"{counter}. {kvp.Key.Brand} {kvp.Key.Model} {kvp.Value}PP - ${this.PrizePool * winnerPercentagesQueue.Dequeue() / 100}");
             counter++;
         }
 
@@ -38,4 +39,3 @@ public class CasualRace : Race
         return (participant.Horsepower / participant.Acceleration) + (participant.Suspension + participant.Durability);
     }
 }
-

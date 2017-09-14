@@ -47,6 +47,7 @@
         {
             this.FoodEaten += quantity;
         }
+
         public virtual void Eat(string type, int quantity)
         {
             this.FoodEaten += quantity;
