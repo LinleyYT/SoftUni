@@ -1,12 +1,11 @@
-﻿using System;
-using _02.Blobs.Interfaces;
+﻿using _02.Blobs.Interfaces;
+using System;
 
 namespace _02.Blobs.Factories
 {
     public class AttackFactory : IAttackFactory
     {
         private const string NamespaceName = "_02.Blobs.Entities.Attacks";
-
 
         public IAttack CreateAttack(string attackType)
         {

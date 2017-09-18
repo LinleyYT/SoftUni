@@ -1,5 +1,5 @@
-﻿using System;
-using _08.MilitaryElite.Models.Interfaces;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System;
 
 namespace _08.MilitaryElite.Models.Classes
 {
@@ -10,6 +10,7 @@ namespace _08.MilitaryElite.Models.Classes
             this.PartName = partName;
             this.HoursWorked = hoursWorked;
         }
+
         private string partName;
         private int hoursWorked;
 
@@ -24,7 +25,7 @@ namespace _08.MilitaryElite.Models.Classes
                 }
             }
         }
-        
+
         public string PartName
         {
             get { return this.partName; }

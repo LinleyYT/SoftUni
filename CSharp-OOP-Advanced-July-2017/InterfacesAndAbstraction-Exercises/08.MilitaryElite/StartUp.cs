@@ -1,5 +1,4 @@
-﻿using System;
-using _08.MilitaryElite.Core;
+﻿using _08.MilitaryElite.Core;
 
 public class StartUp
 {
@@ -9,4 +8,3 @@ public class StartUp
         commandInterpreter.Run();
     }
 }
-

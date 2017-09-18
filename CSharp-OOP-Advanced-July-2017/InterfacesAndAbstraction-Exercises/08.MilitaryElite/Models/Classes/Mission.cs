@@ -1,5 +1,5 @@
-﻿using System;
-using _08.MilitaryElite.Models.Interfaces;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System;
 
 namespace _08.MilitaryElite.Models.Classes
 {

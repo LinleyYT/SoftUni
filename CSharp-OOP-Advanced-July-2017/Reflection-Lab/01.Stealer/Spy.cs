@@ -9,7 +9,7 @@ public class Spy
     {
         Type classType = Type.GetType(investigatedClass);
         FieldInfo[] classFields = classType.GetFields(BindingFlags.Instance | BindingFlags.Static
-            | BindingFlags.NonPublic | BindingFlags.Public);
+                                                      | BindingFlags.NonPublic | BindingFlags.Public);
         var stringBuilder = new StringBuilder();
 
         Object classInstance = Activator.CreateInstance(classType, new object[] { });
@@ -62,9 +62,7 @@ public class Spy
 
         foreach (MethodInfo method in classNonPublicMethods)
         {
-
             stringBuilder.AppendLine(method.Name);
-
         }
         return stringBuilder.ToString().Trim();
     }
@@ -73,7 +71,8 @@ public class Spy
     {
         var stringBuilder = new StringBuilder();
         Type classType = Type.GetType(className);
-        MethodInfo[] classProperties = classType.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+        MethodInfo[] classProperties =
+            classType.GetMethods(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
 
         foreach (MethodInfo getterInfo in classProperties.Where(x => x.Name.StartsWith("get")))
         {

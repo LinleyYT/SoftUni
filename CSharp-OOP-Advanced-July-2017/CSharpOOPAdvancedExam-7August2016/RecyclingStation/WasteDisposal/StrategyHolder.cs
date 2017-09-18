@@ -1,8 +1,8 @@
 ﻿namespace RecyclingStation.WasteDisposal
 {
+    using RecyclingStation.WasteDisposal.Interfaces;
     using System;
     using System.Collections.Generic;
-    using RecyclingStation.WasteDisposal.Interfaces;
 
     internal class StrategyHolder : IStrategyHolder
     {
@@ -13,9 +13,9 @@
             this.strategies = strategies;
         }
 
-        public IReadOnlyDictionary<Type,IGarbageDisposalStrategy> GetDisposalStrategies
+        public IReadOnlyDictionary<Type, IGarbageDisposalStrategy> GetDisposalStrategies
         {
-            get { return (IReadOnlyDictionary<Type, IGarbageDisposalStrategy>)this.strategies; }
+            get { return (IReadOnlyDictionary<Type, IGarbageDisposalStrategy>) this.strategies; }
         }
 
         public bool AddStrategy(Type disposableAttribute, IGarbageDisposalStrategy strategy)

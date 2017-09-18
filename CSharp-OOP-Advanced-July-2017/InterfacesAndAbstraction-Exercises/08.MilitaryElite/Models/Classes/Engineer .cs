@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System.Collections.Generic;
 using System.Text;
-using _08.MilitaryElite.Models.Interfaces;
 
 namespace _08.MilitaryElite.Models.Classes
 {

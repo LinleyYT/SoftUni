@@ -5,7 +5,6 @@
     /// <summary>
     /// An attribute class, that represents the base of all Disposable Attribute classes.
     /// </summary>
-    
     [AttributeUsage(AttributeTargets.Class)]
     public class DisposableAttribute : Attribute
     {
@@ -21,9 +20,5 @@
             get { return this.correspondingStrategyType; }
             private set { this.correspondingStrategyType = value; }
         }
-
-        
-
-
     }
 }

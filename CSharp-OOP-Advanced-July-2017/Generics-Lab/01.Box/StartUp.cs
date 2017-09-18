@@ -14,4 +14,3 @@ public class StartUp
         Console.WriteLine(box.Remove());
     }
 }
-

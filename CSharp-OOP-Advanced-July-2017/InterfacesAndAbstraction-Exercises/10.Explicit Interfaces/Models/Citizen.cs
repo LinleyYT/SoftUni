@@ -1,5 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-using _10.Explicit_Interfaces.Models.Interfaces;
+﻿using _10.Explicit_Interfaces.Models.Interfaces;
 
 namespace _10.Explicit_Interfaces.Models
 {
@@ -28,7 +27,6 @@ namespace _10.Explicit_Interfaces.Models
         {
             get { return Name; }
         }
-
 
         string IResident.Name
         {

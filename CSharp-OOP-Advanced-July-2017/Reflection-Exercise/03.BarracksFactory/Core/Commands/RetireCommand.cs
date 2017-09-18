@@ -5,14 +5,12 @@ namespace _03BarracksFactory.Core.Commands
 {
     public class RetireCommand : Command
     {
-        [Inject]
-        private IRepository repository;
+        [Inject] private IRepository repository;
 
-        public RetireCommand(string[] data) 
+        public RetireCommand(string[] data)
             : base(data)
         {
         }
-        
 
         public override string Execute()
         {

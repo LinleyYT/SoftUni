@@ -1,6 +1,6 @@
-﻿using System;
+﻿using _06.Strategy_Pattern.Comparators;
+using System;
 using System.Collections.Generic;
-using _06.Strategy_Pattern.Comparators;
 
 namespace _06.Strategy_Pattern
 {

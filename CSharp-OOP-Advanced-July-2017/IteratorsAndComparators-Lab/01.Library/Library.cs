@@ -16,7 +16,7 @@ public class Library : IEnumerable<Book>
     }
 
     IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
-    
+
     private class LibraryIterator : IEnumerator<Book>
     {
         public LibraryIterator(IEnumerable<Book> books)
@@ -28,7 +28,9 @@ public class Library : IEnumerable<Book>
         private readonly List<Book> books;
         private int currentIndex;
 
-        public void Dispose() { }
+        public void Dispose()
+        {
+        }
 
         public bool MoveNext() => ++this.currentIndex < this.books.Count;
 

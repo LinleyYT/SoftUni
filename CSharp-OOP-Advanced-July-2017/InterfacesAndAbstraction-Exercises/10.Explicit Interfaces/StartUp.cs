@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using _10.Explicit_Interfaces.Models;
+﻿using _10.Explicit_Interfaces.Models;
 using _10.Explicit_Interfaces.Models.Interfaces;
+using System;
 
 namespace _10.Explicit_Interfaces
 {
@@ -20,7 +19,7 @@ namespace _10.Explicit_Interfaces
                 var currentCitizen = new Citizen(name, country, age);
 
                 Console.WriteLine(((IPerson) currentCitizen).GetName());
-                Console.WriteLine(((IResident)currentCitizen).GetName());
+                Console.WriteLine(((IResident) currentCitizen).GetName());
             }
         }
     }

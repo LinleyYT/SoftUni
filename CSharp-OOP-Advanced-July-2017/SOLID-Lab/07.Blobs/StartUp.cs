@@ -12,7 +12,8 @@ namespace _02.Blobs
             IRepository repository = new Repository();
             IBehaviourFactory behaviourFactory = new BehaviorFactory();
             IAttackFactory attackFactory = new AttackFactory();
-            ICommandInterpretable commandInterpreter = new CommandInterpreter(repository, behaviourFactory, attackFactory);
+            ICommandInterpretable commandInterpreter =
+                new CommandInterpreter(repository, behaviourFactory, attackFactory);
             IRunable engine = new Engine(commandInterpreter);
 
             engine.Run();

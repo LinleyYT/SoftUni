@@ -66,7 +66,8 @@ namespace _02.Blobs.Entities
 
         public void TriggerBehavior()
         {
-            if (this.Behavior is Aggressive) {
+            if (this.Behavior is Aggressive)
+            {
                 if (this.Behavior.IsTriggered)
                 {
                     ((Aggressive) this.Behavior).IsTriggered = true;
@@ -79,7 +80,8 @@ namespace _02.Blobs.Entities
         {
             if (this.Behavior.IsTriggered)
             {
-                if (this.Behavior is Aggressive) {
+                if (this.Behavior is Aggressive)
+                {
                     if (this.Behavior.IsTriggered)
                     {
                         ((Aggressive) this.Behavior).IsTriggered = true;

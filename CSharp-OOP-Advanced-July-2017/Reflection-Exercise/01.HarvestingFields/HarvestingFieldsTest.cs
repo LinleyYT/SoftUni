@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace _01HarestingFields
 {
@@ -17,7 +16,7 @@ namespace _01HarestingFields
             {
                 {"private", () => fieldsInfo.Where(f => f.IsPrivate).ToArray()},
                 {"protected", () => fieldsInfo.Where(f => f.IsFamily).ToArray()},
-                {"public" , () => fieldsInfo.Where(f => f.IsPublic).ToArray()},
+                {"public", () => fieldsInfo.Where(f => f.IsPublic).ToArray()},
                 {"all", () => fieldsInfo}
             };
             string input = String.Empty;

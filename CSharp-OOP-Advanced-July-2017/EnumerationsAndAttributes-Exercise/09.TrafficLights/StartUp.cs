@@ -28,6 +28,5 @@ namespace _09.TrafficLights
                 Console.WriteLine(String.Join(" ", allTraficLights));
             }
         }
-
     }
 }

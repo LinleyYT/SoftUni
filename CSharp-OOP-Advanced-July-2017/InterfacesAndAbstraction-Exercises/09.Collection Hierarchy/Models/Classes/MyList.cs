@@ -8,7 +8,8 @@ namespace _09.Collection_Hierarchy.Models.Classes
         {
             this.Used = this.StringCollectionList.Count;
         }
-        public int Used { get; set; }   
+
+        public int Used { get; set; }
 
         public string RemoveFirstElement()
         {

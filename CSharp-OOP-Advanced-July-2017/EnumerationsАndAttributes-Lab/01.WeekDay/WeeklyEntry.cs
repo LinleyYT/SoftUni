@@ -1,6 +1,6 @@
 ﻿using System;
 
-public  class WeeklyEntry : IComparable<WeeklyEntry>
+public class WeeklyEntry : IComparable<WeeklyEntry>
 {
     public WeeklyEntry(WeekDay weekday, string notes)
     {

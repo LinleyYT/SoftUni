@@ -12,5 +12,4 @@ namespace _07.CustomList
             return new CustomList<T>(temp);
         }
     }
-    
 }

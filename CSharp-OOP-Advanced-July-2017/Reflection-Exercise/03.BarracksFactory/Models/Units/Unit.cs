@@ -1,7 +1,7 @@
 ﻿namespace _03BarracksFactory.Models.Units
 {
-    using System;
     using Contracts;
+    using System;
 
     public class Unit : IUnit
     {
@@ -16,10 +16,7 @@
 
         public int AttackDamage
         {
-            get
-            {
-                return this.attackDamage;
-            }
+            get { return this.attackDamage; }
 
             private set
             {
@@ -34,10 +31,7 @@
 
         public int Health
         {
-            get
-            {
-                return this.health;
-            }
+            get { return this.health; }
 
             set
             {

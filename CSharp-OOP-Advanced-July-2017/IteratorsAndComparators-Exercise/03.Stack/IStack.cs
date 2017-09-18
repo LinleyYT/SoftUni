@@ -7,6 +7,7 @@ namespace _03.Stack
         List<T> List { get; }
 
         void Push(params T[] stackArgs);
+
         void Pop();
     }
 }

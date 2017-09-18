@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 public class StartUp
 {
@@ -16,4 +15,3 @@ public class StartUp
         rect.Draw();
     }
 }
-

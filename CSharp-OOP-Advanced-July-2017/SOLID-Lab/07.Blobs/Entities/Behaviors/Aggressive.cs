@@ -30,7 +30,7 @@ namespace _02.Blobs.Entities.Behaviors
         {
             if (this.ToDelayRecurrentEffect)
             {
-               this.ToDelayRecurrentEffect = false;
+                this.ToDelayRecurrentEffect = false;
             }
             else
             {

@@ -1,11 +1,11 @@
-﻿using System.Text;
-using _08.MilitaryElite.Models.Interfaces;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System.Text;
 
 namespace _08.MilitaryElite.Models.Classes
 {
     public class Spy : Soldier, ISpy
     {
-        public Spy(int id, string firstName, string lastName, int codeNumber) 
+        public Spy(int id, string firstName, string lastName, int codeNumber)
             : base(id, firstName, lastName)
         {
             this.CodeNumber = codeNumber;

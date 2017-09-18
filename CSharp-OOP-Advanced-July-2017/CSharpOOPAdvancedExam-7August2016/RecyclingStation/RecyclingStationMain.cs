@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using RecyclingStation.BusinessLayer.Contracts.Core;
+﻿using RecyclingStation.BusinessLayer.Contracts.Core;
 using RecyclingStation.BusinessLayer.Contracts.Factories;
 using RecyclingStation.BusinessLayer.Contracts.IO;
 using RecyclingStation.BusinessLayer.Core;
@@ -8,6 +6,8 @@ using RecyclingStation.BusinessLayer.Core.IO;
 using RecyclingStation.BusinessLayer.Factories;
 using RecyclingStation.WasteDisposal;
 using RecyclingStation.WasteDisposal.Interfaces;
+using System;
+using System.Collections.Generic;
 
 namespace RecyclingStation
 {

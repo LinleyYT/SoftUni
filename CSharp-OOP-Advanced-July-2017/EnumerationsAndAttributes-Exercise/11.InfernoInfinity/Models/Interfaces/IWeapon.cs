@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using _11.InfernoInfinity.Models.Enums;
+﻿using _11.InfernoInfinity.Models.Enums;
+using System.Collections;
 
 namespace _11.InfernoInfinity.Models.Interfaces
 {
@@ -10,7 +10,9 @@ namespace _11.InfernoInfinity.Models.Interfaces
         string Name { get; }
 
         int GetTotalMinDamage();
+
         int GetTotalMaxDamage();
+
         void AddGem(int index, IGem gem);
     }
 }

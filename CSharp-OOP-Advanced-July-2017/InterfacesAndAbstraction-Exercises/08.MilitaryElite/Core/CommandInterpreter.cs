@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using _08.MilitaryElite.Models.Classes;
+﻿using _08.MilitaryElite.Models.Classes;
 using _08.MilitaryElite.Models.Interfaces;
+using System;
 
 namespace _08.MilitaryElite.Core
 {
@@ -12,6 +10,7 @@ namespace _08.MilitaryElite.Core
         {
             this.DataManager = new DataManager();
         }
+
         public DataManager DataManager { get; set; }
 
         public void Run()
@@ -22,7 +21,7 @@ namespace _08.MilitaryElite.Core
             {
                 try
                 {
-                    var inputArgs = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    var inputArgs = input.Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
                     ExecuteCommand(inputArgs);
                 }
                 catch (Exception e)
@@ -54,6 +53,7 @@ namespace _08.MilitaryElite.Core
                 case "Private":
                     var privateSalary = double.Parse(soldierStrings[4]);
                     return new Private(id, firstName, lastName, privateSalary);
+
                 case "LeutenantGeneral":
                     var ltSalary = double.Parse(soldierStrings[4]);
                     var currentLt = new LeutenantGeneral(id, firstName, lastName, ltSalary);
@@ -68,6 +68,7 @@ namespace _08.MilitaryElite.Core
                     }
 
                     return currentLt;
+
                 case "Engineer":
                     var engineerSalary = double.Parse(soldierStrings[4]);
                     var corps = soldierStrings[5];
@@ -82,6 +83,7 @@ namespace _08.MilitaryElite.Core
                     }
 
                     return currentEngineer;
+
                 case "Commando":
                     var commandoSalary = double.Parse(soldierStrings[4]);
                     var commandoCorps = soldierStrings[5];
@@ -102,9 +104,11 @@ namespace _08.MilitaryElite.Core
                     }
 
                     return currentCommando;
+
                 case "Spy":
                     var codeNumber = int.Parse(soldierStrings[4]);
                     return new Spy(id, firstName, lastName, codeNumber);
+
                 default:
                     return null;
             }

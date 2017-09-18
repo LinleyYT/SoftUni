@@ -6,8 +6,8 @@
     private const long AssassinHitPoints = 150;
     private const long AssassinDamage = 300;
 
-    public Assassin(string name, IInventory inventory)
-        : base(name, inventory)
+    public Assassin(string name)
+        : base(name)
     {
         this.strength = AssassinStrength;
         this.agility = AssassinAgility;

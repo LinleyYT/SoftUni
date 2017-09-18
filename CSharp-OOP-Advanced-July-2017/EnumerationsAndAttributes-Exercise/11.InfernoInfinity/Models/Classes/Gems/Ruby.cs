@@ -18,7 +18,7 @@ namespace _11.InfernoInfinity.Models.Classes.Gems
 
         public int GetTotalStrength()
         {
-            return Strength + (int)this.Clarity;
+            return Strength + (int) this.Clarity;
         }
 
         public int GetTotalAgility()
@@ -28,7 +28,7 @@ namespace _11.InfernoInfinity.Models.Classes.Gems
 
         public int GetTotalVitality()
         {
-            return Vitality + (int)this.Clarity;
+            return Vitality + (int) this.Clarity;
         }
     }
 }

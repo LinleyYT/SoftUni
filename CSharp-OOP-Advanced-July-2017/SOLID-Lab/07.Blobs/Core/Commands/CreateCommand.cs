@@ -6,14 +6,11 @@ namespace _02.Blobs.Core.Commands
 {
     public class CreateCommand : Command
     {
-        [Inject]
-        private IRepository repository;
+        [Inject] private IRepository repository;
 
-        [Inject]
-        private IBehaviourFactory behaviourFactory;
+        [Inject] private IBehaviourFactory behaviourFactory;
 
-        [Inject]
-        private IAttackFactory attackFactory;
+        [Inject] private IAttackFactory attackFactory;
 
         public CreateCommand(string[] data) : base(data)
         {
@@ -24,7 +21,8 @@ namespace _02.Blobs.Core.Commands
             var currentBehavior = this.behaviourFactory.CreateBehavior(Data[3]);
             var currentAttack = this.attackFactory.CreateAttack(Data[4]);
 
-            var currentBlob = new Blob(this.Data[0], int.Parse(this.Data[1]), int.Parse(this.Data[2]), currentBehavior, currentAttack);
+            var currentBlob = new Blob(this.Data[0], int.Parse(this.Data[1]), int.Parse(this.Data[2]), currentBehavior,
+                currentAttack);
 
             this.repository.AddUnit(currentBlob);
 

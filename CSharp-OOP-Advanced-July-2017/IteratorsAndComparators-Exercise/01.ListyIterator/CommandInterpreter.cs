@@ -36,12 +36,15 @@ namespace _01.ListyIterator
                         case "Move":
                             Console.WriteLine(listyIterator.Move());
                             break;
+
                         case "Print":
                             listyIterator.Print();
                             break;
+
                         case "HasNext":
                             Console.WriteLine(listyIterator.HasNext());
                             break;
+
                         case "PrintAll":
                             var sb = new StringBuilder();
 

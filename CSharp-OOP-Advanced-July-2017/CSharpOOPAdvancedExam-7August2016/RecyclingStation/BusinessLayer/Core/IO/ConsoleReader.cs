@@ -1,5 +1,5 @@
-﻿using System;
-using RecyclingStation.BusinessLayer.Contracts.IO;
+﻿using RecyclingStation.BusinessLayer.Contracts.IO;
+using System;
 
 namespace RecyclingStation.BusinessLayer.Core.IO
 {

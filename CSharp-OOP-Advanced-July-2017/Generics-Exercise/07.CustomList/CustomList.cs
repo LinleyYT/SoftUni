@@ -12,6 +12,7 @@ namespace _07.CustomList
         {
             this.List = new List<T>(collection);
         }
+
         public IList<T> List { get; private set; }
 
         public void Add(T element)

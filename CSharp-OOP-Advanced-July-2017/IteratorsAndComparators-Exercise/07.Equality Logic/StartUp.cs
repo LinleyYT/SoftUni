@@ -1,6 +1,6 @@
-﻿using System;
+﻿using _06.Strategy_Pattern;
+using System;
 using System.Collections.Generic;
-using _06.Strategy_Pattern;
 
 namespace _07.Equality_Logic
 {

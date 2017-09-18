@@ -1,8 +1,8 @@
-﻿using System;
+﻿using _11.InfernoInfinity.Factories;
+using _11.InfernoInfinity.Models.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using _11.InfernoInfinity.Factories;
-using _11.InfernoInfinity.Models.Interfaces;
 
 namespace _11.InfernoInfinity.Core
 {
@@ -14,9 +14,10 @@ namespace _11.InfernoInfinity.Core
             this.WeaponFactory = new WeaponFactory();
             this.GemFactory = new GemFactory();
         }
+
         public IList<IWeapon> Weapons { get; private set; }
         public WeaponFactory WeaponFactory { get; private set; }
-        public GemFactory GemFactory { get; private set; }  
+        public GemFactory GemFactory { get; private set; }
 
         public void CreateWeapon(string[] strings)
         {
@@ -24,7 +25,7 @@ namespace _11.InfernoInfinity.Core
 
             if (currentWeapon == null)
             {
-               throw new ArgumentNullException();
+                throw new ArgumentNullException();
             }
 
             this.Weapons.Add(currentWeapon);
@@ -59,7 +60,7 @@ namespace _11.InfernoInfinity.Core
             var weaponName = strings[0];
             var gemIndex = int.Parse(strings[1]);
 
-            if (gemIndex >= this.Weapons.FirstOrDefault(x => x.Name == weaponName).Sockets.Count 
+            if (gemIndex >= this.Weapons.FirstOrDefault(x => x.Name == weaponName).Sockets.Count
                 || this.Weapons.FirstOrDefault(x => x.Name == weaponName).Sockets[gemIndex] == null)
             {
                 throw new ArgumentException("Invalid index");

@@ -3,6 +3,7 @@
     public interface IMyList
     {
         string RemoveFirstElement();
+
         int Used { get; }
     }
 }

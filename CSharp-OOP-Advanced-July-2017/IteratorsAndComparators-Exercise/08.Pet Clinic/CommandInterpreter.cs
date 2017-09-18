@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 
 namespace _08.Pet_Clinic
 {
@@ -24,7 +23,7 @@ namespace _08.Pet_Clinic
             {
                 var commandArgs = Console.ReadLine()
                     .Trim()
-                    .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                    .Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
 
                 try
                 {
@@ -51,18 +50,23 @@ namespace _08.Pet_Clinic
                 case "Create Pet":
                     CreatePet(commandArgs.Skip(2).ToArray());
                     break;
+
                 case "Create Clinic":
                     CreateClinic(commandArgs.Skip(2).ToArray());
                     break;
+
                 case "Add":
                     Console.WriteLine(this.AddPetToClinic(commandArgs.Skip(1).ToArray()));
                     break;
+
                 case "HasEmptyRooms":
                     Console.WriteLine(this.HasRooms(commandArgs.Skip(1).ToArray()));
                     break;
+
                 case "Print":
                     Print(commandArgs.Skip(1).ToArray());
                     break;
+
                 case "Release":
                     Console.WriteLine(this.Release(commandArgs.Skip(1).ToArray()));
                     break;
@@ -93,7 +97,8 @@ namespace _08.Pet_Clinic
                 }
                 else
                 {
-                    Console.WriteLine(this.Clinics.FirstOrDefault(x => x.Name == clinicToPrint).OccupiedRooms[roomToPrint]);
+                    Console.WriteLine(this.Clinics.FirstOrDefault(x => x.Name == clinicToPrint)
+                        .OccupiedRooms[roomToPrint]);
                 }
             }
         }

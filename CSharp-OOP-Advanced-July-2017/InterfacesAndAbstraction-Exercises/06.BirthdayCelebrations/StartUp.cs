@@ -24,6 +24,7 @@ public class StartUp
                     IBirthable currentCitizen = new Citizen(name, age, id, birthday);
                     listOfInhabitantsWithBirthdays.Add(currentCitizen);
                     break;
+
                 case "Pet":
                     var namePet = inputArgs[1];
                     var birthdayPet = inputArgs[2];
@@ -41,4 +42,3 @@ public class StartUp
         }
     }
 }
-

@@ -1,5 +1,5 @@
-﻿using System;
-using _06.Logger.Interfaces;
+﻿using _06.Logger.Interfaces;
+using System;
 
 namespace _06.Logger.Entities.Appenders
 {

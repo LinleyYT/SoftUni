@@ -1,9 +1,7 @@
-﻿using System.Reflection;
-
-namespace _03BarracksFactory.Core.Factories
+﻿namespace _03BarracksFactory.Core.Factories
 {
-    using System;
     using Contracts;
+    using System;
 
     public class UnitFactory : IUnitFactory
     {

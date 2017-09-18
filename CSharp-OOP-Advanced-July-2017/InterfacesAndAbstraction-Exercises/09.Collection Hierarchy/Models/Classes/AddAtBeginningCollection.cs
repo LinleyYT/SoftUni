@@ -1,6 +1,6 @@
-﻿using System;
+﻿using _09.Collection_Hierarchy.Models.Interfaces;
+using System;
 using System.Collections.Generic;
-using _09.Collection_Hierarchy.Models.Interfaces;
 
 namespace _09.Collection_Hierarchy.Models.Classes
 {
@@ -10,7 +10,7 @@ namespace _09.Collection_Hierarchy.Models.Classes
         {
             this.StringCollectionList = new List<string>();
         }
-        
+
         public List<string> StringCollectionList { get; private set; }
 
         public int AddAtBeginning(string stringToAdd)

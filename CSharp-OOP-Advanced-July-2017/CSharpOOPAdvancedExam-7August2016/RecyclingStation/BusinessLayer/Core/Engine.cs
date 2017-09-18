@@ -1,8 +1,8 @@
-﻿using System;
+﻿using RecyclingStation.BusinessLayer.Contracts.Core;
+using RecyclingStation.BusinessLayer.Contracts.IO;
+using System;
 using System.Linq;
 using System.Reflection;
-using RecyclingStation.BusinessLayer.Contracts.Core;
-using RecyclingStation.BusinessLayer.Contracts.IO;
 
 namespace RecyclingStation.BusinessLayer.Core
 {
@@ -47,7 +47,7 @@ namespace RecyclingStation.BusinessLayer.Core
                     .FirstOrDefault(m => m.Name.Equals(commandName, StringComparison.OrdinalIgnoreCase));
 
                 ParameterInfo[] methodParameters = methodToInvoke.GetParameters();
-                
+
                 object[] parsedParams = new object[methodParameters.Length];
 
                 for (int i = 0; i < methodParameters.Length; i++)

@@ -3,6 +3,7 @@
     public interface IRepository
     {
         void AddUnit(IBlob blob);
+
         string Status();
     }
 }

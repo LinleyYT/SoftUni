@@ -1,8 +1,8 @@
-﻿using System;
+﻿using RecyclingStation.BusinessLayer.Contracts.Factories;
+using RecyclingStation.WasteDisposal.Interfaces;
+using System;
 using System.Linq;
 using System.Reflection;
-using RecyclingStation.BusinessLayer.Contracts.Factories;
-using RecyclingStation.WasteDisposal.Interfaces;
 
 namespace RecyclingStation.BusinessLayer.Factories
 {

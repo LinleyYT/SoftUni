@@ -1,8 +1,7 @@
-﻿using System;
+﻿using _11.InfernoInfinity.Models.Enums;
+using _11.InfernoInfinity.Models.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
-using _11.InfernoInfinity.Models.Enums;
-using _11.InfernoInfinity.Models.Interfaces;
 
 namespace _11.InfernoInfinity.Models.Classes
 {
@@ -19,7 +18,7 @@ namespace _11.InfernoInfinity.Models.Classes
             this.Sockets = new List<IGem>(new IGem[SocketCount]);
         }
 
-        public string Name { get; private set; }    
+        public string Name { get; private set; }
         public IList Sockets { get; }
         public Rarity Rarity { get; }
 
@@ -33,7 +32,7 @@ namespace _11.InfernoInfinity.Models.Classes
 
         public int GetTotalMinDamage()
         {
-            var totalMinDamage = BaseMinDamage * (int)this.Rarity;
+            var totalMinDamage = BaseMinDamage * (int) this.Rarity;
 
             foreach (IGem gem in this.Sockets)
             {
@@ -50,7 +49,7 @@ namespace _11.InfernoInfinity.Models.Classes
 
         public int GetTotalMaxDamage()
         {
-            var totalMaxDamage = BaseMaxDamage * (int)this.Rarity;
+            var totalMaxDamage = BaseMaxDamage * (int) this.Rarity;
 
             foreach (IGem gem in this.Sockets)
             {

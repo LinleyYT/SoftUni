@@ -1,4 +1,4 @@
-﻿ public interface IRebel : IInhabitant
-    {
-        string Group { get; }
-    }
+﻿public interface IRebel : IInhabitant
+{
+    string Group { get; }
+}

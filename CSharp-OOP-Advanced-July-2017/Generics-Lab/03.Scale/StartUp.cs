@@ -9,4 +9,3 @@ public class StartUp
         Console.WriteLine(scale.GetHavier());
     }
 }
-

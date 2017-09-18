@@ -1,6 +1,4 @@
-﻿using System;
-
-public class StartUp
+﻿public class StartUp
 {
     public static void Main()
     {
@@ -8,4 +6,3 @@ public class StartUp
         int[] integers = ArrayCreator.Create(10, 33);
     }
 }
-

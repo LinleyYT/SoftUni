@@ -6,8 +6,8 @@
     private const long BarbarianHitPoints = 350;
     private const long BarbarianDamage = 150;
 
-    public Barbarian(string name, IInventory inventory)
-        : base(name, inventory)
+    public Barbarian(string name)
+        : base(name)
     {
         this.strength = BarbarianStrength;
         this.agility = BarbarianAgility;

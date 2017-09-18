@@ -1,6 +1,6 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 using System.Collections.Generic;
-using NUnit.Framework;
 
 namespace _01.Database
 {
@@ -12,7 +12,7 @@ namespace _01.Database
         [Test]
         public void DatabaseCapacityIsSixteen()
         {
-            IntDataBase db = new IntDataBase(new List<int>() { 1, 2 });
+            IntDataBase db = new IntDataBase(new List<int>() {1, 2});
 
             Assert.AreEqual(16, db.Capacity, "Capacity must be 16");
         }
@@ -58,17 +58,18 @@ namespace _01.Database
         public void DatebaseContructorDoesntAcceptNullObject()
         {
             //Assert
-            Assert.Throws<ArgumentNullException>(() => new IntDataBase(null), "Database cannot be initilized with null");
+            Assert.Throws<ArgumentNullException>(() => new IntDataBase(null),
+                "Database cannot be initilized with null");
         }
 
         [Test]
         public void DatebaseElementsReturnsValidCollection()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1, 2, 3 });
+            IntDataBase db = new IntDataBase(new List<int>() {1, 2, 3});
 
             //Assert
-            CollectionAssert.AreEqual(new int[] { 1, 2, 3 }, db.Elements);
+            CollectionAssert.AreEqual(new int[] {1, 2, 3}, db.Elements);
             Assert.AreEqual(3, db.Count, string.Format(ErrorMessageForDifferentCount, 3));
         }
 
@@ -76,7 +77,7 @@ namespace _01.Database
         public void DatabaseAddElement()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1 });
+            IntDataBase db = new IntDataBase(new List<int>() {1});
 
             //Act
             db.Add(2);
@@ -89,7 +90,7 @@ namespace _01.Database
         public void DatabaseAddManyElements()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1 });
+            IntDataBase db = new IntDataBase(new List<int>() {1});
 
             //Act
             db.Add(2);
@@ -120,20 +121,20 @@ namespace _01.Database
         public void CheckIfAddedElementsIsLastElementInCollection()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1 });
+            IntDataBase db = new IntDataBase(new List<int>() {1});
 
             //Act
             db.Add(2);
 
             //Assert
-            CollectionAssert.AreEqual(new int[] { 1, 2 }, db.Elements);
+            CollectionAssert.AreEqual(new int[] {1, 2}, db.Elements);
         }
 
         [Test]
         public void CheckIfAddedElementsAreLastInCollection()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1 });
+            IntDataBase db = new IntDataBase(new List<int>() {1});
 
             //Act
             db.Add(2);
@@ -141,27 +142,27 @@ namespace _01.Database
             db.Add(4);
 
             //Assert
-            CollectionAssert.AreEqual(new int[] { 1, 2, 3, 4 }, db.Elements);
+            CollectionAssert.AreEqual(new int[] {1, 2, 3, 4}, db.Elements);
         }
 
         [Test]
         public void RemoveSingleElement()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1, 2, 3, 4 });
+            IntDataBase db = new IntDataBase(new List<int>() {1, 2, 3, 4});
 
             //Act
             db.Remove();
 
             //Assert
-            CollectionAssert.AreEqual(new int[] { 1, 2, 3 }, db.Elements);
+            CollectionAssert.AreEqual(new int[] {1, 2, 3}, db.Elements);
         }
 
         [Test]
         public void RemoveManyElements()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1, 2, 3, 4 });
+            IntDataBase db = new IntDataBase(new List<int>() {1, 2, 3, 4});
 
             //Act
             db.Remove();
@@ -169,14 +170,14 @@ namespace _01.Database
             db.Remove();
 
             //Assert
-            CollectionAssert.AreEqual(new int[] { 1 }, db.Elements);
+            CollectionAssert.AreEqual(new int[] {1}, db.Elements);
         }
 
         [Test]
         public void RemoveMoreElementsThanCollectionHave()
         {
             //Arrange
-            IntDataBase db = new IntDataBase(new List<int>() { 1, 2 });
+            IntDataBase db = new IntDataBase(new List<int>() {1, 2});
 
             //Act
             db.Remove();
@@ -185,6 +186,5 @@ namespace _01.Database
             //Assert
             Assert.Throws<InvalidOperationException>(() => db.Remove());
         }
-
     }
 }

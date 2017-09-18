@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System.Collections.Generic;
 using System.Linq;
-using _08.MilitaryElite.Models.Interfaces;
 
 namespace _08.MilitaryElite.Core
 {
@@ -10,6 +10,7 @@ namespace _08.MilitaryElite.Core
         {
             this.Soldiers = new List<ISoldier>();
         }
+
         private IList<ISoldier> soldiers;
 
         public IList<ISoldier> Soldiers

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace _01.GenericBoxOfString
 {
@@ -13,7 +12,7 @@ namespace _01.GenericBoxOfString
             for (int i = 0; i < n; i++)
             {
                 var input = double.Parse(Console.ReadLine());
-                
+
                 box.Add(input);
             }
 

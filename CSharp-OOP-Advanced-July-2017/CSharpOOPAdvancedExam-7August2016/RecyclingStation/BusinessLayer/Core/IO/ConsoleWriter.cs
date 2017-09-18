@@ -1,6 +1,6 @@
-﻿using System;
+﻿using RecyclingStation.BusinessLayer.Contracts.IO;
+using System;
 using System.Text;
-using RecyclingStation.BusinessLayer.Contracts.IO;
 
 namespace RecyclingStation.BusinessLayer.Core.IO
 {
@@ -8,10 +8,9 @@ namespace RecyclingStation.BusinessLayer.Core.IO
     {
         private StringBuilder outputGatherer;
 
-        public ConsoleWriter() 
+        public ConsoleWriter()
             : this(new StringBuilder())
         {
-            
         }
 
         public ConsoleWriter(StringBuilder outputGatherer)

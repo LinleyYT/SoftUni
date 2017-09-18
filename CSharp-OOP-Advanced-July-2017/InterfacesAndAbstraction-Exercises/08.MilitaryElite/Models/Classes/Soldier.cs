@@ -1,6 +1,5 @@
-﻿using System;
-using System.Runtime.InteropServices.ComTypes;
-using _08.MilitaryElite.Models.Interfaces;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System;
 
 namespace _08.MilitaryElite.Models.Classes
 {
@@ -48,7 +47,5 @@ namespace _08.MilitaryElite.Models.Classes
                 this.lastName = value;
             }
         }
-
-        
     }
 }

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 
 namespace _04.Froggy
@@ -34,6 +33,5 @@ namespace _04.Froggy
         }
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
-        
     }
 }

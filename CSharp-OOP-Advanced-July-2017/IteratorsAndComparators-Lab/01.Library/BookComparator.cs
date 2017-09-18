@@ -10,7 +10,7 @@ public class BookComparator : IComparer<Book>
         {
             result = y.Year.CompareTo(x.Year);
         }
-        
+
         return result;
     }
 }

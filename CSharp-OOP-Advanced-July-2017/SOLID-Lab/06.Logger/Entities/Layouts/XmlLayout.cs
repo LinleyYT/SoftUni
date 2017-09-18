@@ -1,5 +1,5 @@
-﻿using System.Text;
-using _06.Logger.Interfaces;
+﻿using _06.Logger.Interfaces;
+using System.Text;
 
 namespace _06.Logger.Entities.Layouts
 {

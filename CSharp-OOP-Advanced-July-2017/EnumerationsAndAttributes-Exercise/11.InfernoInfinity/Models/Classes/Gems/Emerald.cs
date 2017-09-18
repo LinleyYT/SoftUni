@@ -18,17 +18,17 @@ namespace _11.InfernoInfinity.Models.Classes.Gems
 
         public int GetTotalStrength()
         {
-            return Strength + (int)this.Clarity;
+            return Strength + (int) this.Clarity;
         }
 
         public int GetTotalAgility()
         {
-            return Agility + (int)this.Clarity;
+            return Agility + (int) this.Clarity;
         }
 
         public int GetTotalVitality()
         {
-            return Vitality + (int)this.Clarity;
+            return Vitality + (int) this.Clarity;
         }
     }
 }

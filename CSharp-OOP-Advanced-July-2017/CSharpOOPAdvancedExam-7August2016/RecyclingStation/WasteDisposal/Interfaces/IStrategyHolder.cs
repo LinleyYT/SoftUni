@@ -11,7 +11,7 @@
         /// <summary>
         /// Returns a readonly version of the collection of type Type-IGarbageDisposalStrategy, containing the currently mapped strategies.
         /// </summary>
-        IReadOnlyDictionary<Type,IGarbageDisposalStrategy> GetDisposalStrategies { get; } 
+        IReadOnlyDictionary<Type, IGarbageDisposalStrategy> GetDisposalStrategies { get; }
 
         /// <summary>
         /// Maps a strategy to an attribute type and adds it to the currently contained strategies, can contain only unique attribute types. Throws an exception in case that disposableAttribute is a type that is not derived from the Disposable Attribute class.

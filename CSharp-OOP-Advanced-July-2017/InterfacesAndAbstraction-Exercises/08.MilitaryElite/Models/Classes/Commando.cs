@@ -1,18 +1,18 @@
-﻿using System.Collections.Generic;
+﻿using _08.MilitaryElite.Models.Interfaces;
+using System.Collections.Generic;
 using System.Text;
-using _08.MilitaryElite.Models.Interfaces;
 
 namespace _08.MilitaryElite.Models.Classes
 {
     public class Commando : SpecialisedSoldier, ICommando
     {
-        public Commando(int id, string firstName, string lastName, double salary, string corps) 
+        public Commando(int id, string firstName, string lastName, double salary, string corps)
             : base(id, firstName, lastName, salary, corps)
         {
             this.Missions = new List<IMission>();
         }
 
-        public IList<IMission> Missions { get;}
+        public IList<IMission> Missions { get; }
 
         public void AddMission(IMission mission)
         {

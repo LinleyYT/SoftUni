@@ -7,7 +7,9 @@ namespace _11.InfernoInfinity.Models.Interfaces
         Clarity Clarity { get; }
 
         int GetTotalStrength();
+
         int GetTotalAgility();
+
         int GetTotalVitality();
     }
 }

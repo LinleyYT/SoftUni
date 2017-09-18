@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _10.Tuple
 {
@@ -16,7 +11,7 @@ namespace _10.Tuple
             var address = inputOne[2];
             var town = inputOne[3];
 
-            Console.WriteLine(new Tuple<string,string,string>(fullName, address, town));
+            Console.WriteLine(new Tuple<string, string, string>(fullName, address, town));
 
             var inputTwo = Console.ReadLine().Split();
             var name = inputTwo[0];
@@ -32,7 +27,6 @@ namespace _10.Tuple
             var bankName = inputThree[2];
 
             Console.WriteLine(new Tuple<string, double, string>(nameThree, accountBalance, bankName));
-            
         }
     }
 }

@@ -11,4 +11,3 @@ public class StartUp
         Console.WriteLine(tesla.ToString());
     }
 }
-

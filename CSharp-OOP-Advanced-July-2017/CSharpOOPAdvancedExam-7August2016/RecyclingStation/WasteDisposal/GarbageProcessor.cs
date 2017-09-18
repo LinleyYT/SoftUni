@@ -1,9 +1,9 @@
 ﻿namespace RecyclingStation.WasteDisposal
 {
-    using System;
-    using System.Linq;
     using RecyclingStation.WasteDisposal.Attributes;
     using RecyclingStation.WasteDisposal.Interfaces;
+    using System;
+    using System.Linq;
 
     public class GarbageProcessor : IGarbageProcessor
     {
@@ -18,7 +18,7 @@
         {
             Type type = garbage.GetType();
             DisposableAttribute disposalAttribute = (DisposableAttribute) type
-                .GetCustomAttributes(typeof(DisposableAttribute) ,true).FirstOrDefault();
+                .GetCustomAttributes(typeof(DisposableAttribute), true).FirstOrDefault();
 
             if (disposalAttribute == null)
             {

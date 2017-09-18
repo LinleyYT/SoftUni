@@ -1,13 +1,12 @@
-﻿using System;
+﻿using _08.MilitaryElite.Models.Interfaces;
 using System.Collections.Generic;
 using System.Text;
-using _08.MilitaryElite.Models.Interfaces;
 
 namespace _08.MilitaryElite.Models.Classes
 {
     public class LeutenantGeneral : Private, ILeutenantGeneral
     {
-        public LeutenantGeneral(int id, string firstName, string lastName, double salary) 
+        public LeutenantGeneral(int id, string firstName, string lastName, double salary)
             : base(id, firstName, lastName, salary)
         {
             this.Privates = new List<ISoldier>();

@@ -13,7 +13,8 @@ namespace _09.TrafficLights
 
         public void ChangeState()
         {
-            this.TrafficLightEnum = (TrafficLightEnum)(((int)this.TrafficLightEnum + 1) % Enum.GetNames(typeof(TrafficLightEnum)).Length);
+            this.TrafficLightEnum = (TrafficLightEnum) (((int) this.TrafficLightEnum + 1) %
+                                                        Enum.GetNames(typeof(TrafficLightEnum)).Length);
         }
 
         public override string ToString()

@@ -7,7 +7,7 @@ namespace _10.CreateCustomClassAttribute
     {
         public Engine()
         {
-            this.WeaponCustomAttribute = (WeaponCustomAttribute)typeof(Weapon).GetCustomAttributes(false).First();
+            this.WeaponCustomAttribute = (WeaponCustomAttribute) typeof(Weapon).GetCustomAttributes(false).First();
         }
 
         public WeaponCustomAttribute WeaponCustomAttribute { get; private set; }
@@ -29,12 +29,15 @@ namespace _10.CreateCustomClassAttribute
                 case "Author":
                     Console.WriteLine($"Author: {WeaponCustomAttribute.Author}");
                     break;
+
                 case "Revision":
                     Console.WriteLine($"Revision: {WeaponCustomAttribute.Revisions}");
                     break;
+
                 case "Description":
                     Console.WriteLine($"Class description: {WeaponCustomAttribute.Description}");
                     break;
+
                 case "Reviewers":
                     Console.WriteLine($"Reviewers: {String.Join(", ", WeaponCustomAttribute.Reviewers)}");
                     break;

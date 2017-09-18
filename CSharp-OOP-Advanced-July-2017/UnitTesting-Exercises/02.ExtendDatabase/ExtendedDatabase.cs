@@ -44,9 +44,15 @@ public class ExtendedDatabase
         }
     }
 
-    public int Capacity { get { return DefaultCapacity; } }
+    public int Capacity
+    {
+        get { return DefaultCapacity; }
+    }
 
-    public int Count { get { return this.currentIndex; } }
+    public int Count
+    {
+        get { return this.currentIndex; }
+    }
 
     public void Add(Person element)
     {

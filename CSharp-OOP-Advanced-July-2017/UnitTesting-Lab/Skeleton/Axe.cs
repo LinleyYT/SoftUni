@@ -1,7 +1,7 @@
 ﻿using System;
 using Skeleton;
 
-// Axe durability drop with 5 
+// Axe durability drop with 5
 public class Axe : IWeapon
 {
     private int attackPoints;

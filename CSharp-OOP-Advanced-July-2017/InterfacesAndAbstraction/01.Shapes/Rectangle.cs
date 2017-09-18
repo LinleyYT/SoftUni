@@ -47,4 +47,3 @@ public class Rectangle : IDrawable
         Console.WriteLine(end);
     }
 }
-

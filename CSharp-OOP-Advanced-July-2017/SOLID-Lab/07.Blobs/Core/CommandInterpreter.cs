@@ -1,9 +1,9 @@
-﻿using System;
+﻿using _02.Blobs.Attributes;
+using _02.Blobs.Interfaces;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using _02.Blobs.Attributes;
-using _02.Blobs.Interfaces;
 
 namespace _02.Blobs.Core
 {
@@ -15,7 +15,8 @@ namespace _02.Blobs.Core
         private IBehaviourFactory behaviourFactory;
         private IAttackFactory attackFactory;
 
-        public CommandInterpreter(IRepository repository, IBehaviourFactory behaviourFactory, IAttackFactory attackFactory)
+        public CommandInterpreter(IRepository repository, IBehaviourFactory behaviourFactory,
+            IAttackFactory attackFactory)
         {
             this.repository = repository;
             this.behaviourFactory = behaviourFactory;
@@ -41,7 +42,7 @@ namespace _02.Blobs.Core
                 throw new InvalidOperationException("Invalid command!");
             }
 
-            IExecutable currentCommand = (IExecutable)Activator.CreateInstance(commandType, commandParams);
+            IExecutable currentCommand = (IExecutable) Activator.CreateInstance(commandType, commandParams);
 
             currentCommand = this.InjectDependencies(currentCommand);
 

@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace _06.Strategy_Pattern
+﻿namespace _06.Strategy_Pattern
 {
     public class Person
     {

@@ -18,9 +18,11 @@ namespace _08.Pet_Clinic
                 this.OccupiedRooms.Add(null);
             }
         }
+
         private int numberOfRooms;
 
         public string Name { get; set; }
+
         public int NumberOfRooms
         {
             get { return this.numberOfRooms; }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Text;
 
 namespace _01.Card_Suit
 {
@@ -28,7 +27,7 @@ namespace _01.Card_Suit
                     {
                         var currentCard = new Card(rankEnum, suitEnum);
 
-                        if (playerA.DeckOfCards.Any(x => x.Power() == currentCard.Power()) 
+                        if (playerA.DeckOfCards.Any(x => x.Power() == currentCard.Power())
                             || playerB.DeckOfCards.Any(x => x.Power() == currentCard.Power()))
                         {
                             throw new ArgumentException("Card is not in the deck.");
@@ -62,7 +61,7 @@ namespace _01.Card_Suit
                     {
                         var currentCard = new Card(rankEnum, suitEnum);
 
-                        if (playerA.DeckOfCards.Any(x => x.Power() == currentCard.Power()) 
+                        if (playerA.DeckOfCards.Any(x => x.Power() == currentCard.Power())
                             || playerB.DeckOfCards.Any(x => x.Power() == currentCard.Power()))
                         {
                             throw new ArgumentException("Card is not in the deck.");
@@ -83,11 +82,13 @@ namespace _01.Card_Suit
 
             if (playerA.DeckOfCards.Max(x => x.Power()) > playerB.DeckOfCards.Max(x => x.Power()))
             {
-                Console.WriteLine($"{playerA.Name} wins with {playerA.DeckOfCards.OrderByDescending(x => x.Power()).FirstOrDefault()}.");
+                Console.WriteLine(
+                    $"{playerA.Name} wins with {playerA.DeckOfCards.OrderByDescending(x => x.Power()).FirstOrDefault()}.");
             }
             else
             {
-                Console.WriteLine($"{playerB.Name} wins with {playerB.DeckOfCards.OrderByDescending(x => x.Power()).FirstOrDefault()}.");
+                Console.WriteLine(
+                    $"{playerB.Name} wins with {playerB.DeckOfCards.OrderByDescending(x => x.Power()).FirstOrDefault()}.");
             }
         }
     }

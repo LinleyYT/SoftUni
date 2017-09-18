@@ -11,7 +11,7 @@
         double EnergyBalance { get; }
 
         /// <summary>
-        /// The resulting profit/loss in capital from processing the garbage, if the number is negative it means the process costed more, than the ammount of profits it provided. 
+        /// The resulting profit/loss in capital from processing the garbage, if the number is negative it means the process costed more, than the ammount of profits it provided.
         /// </summary>
         double CapitalBalance { get; }
     }

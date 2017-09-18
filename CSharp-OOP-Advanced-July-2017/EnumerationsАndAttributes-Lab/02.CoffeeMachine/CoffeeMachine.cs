@@ -16,17 +16,16 @@ public class CoffeeMachine
         private set { this.coffeesSold = value; }
     }
 
-    
     public int TotalCoinValue { get; private set; }
 
     public void BuyCoffee(string size, string type)
     {
         CoffeePrice coffeePrice;
         CoffeeType coffeeType;
-        
+
         if (Enum.TryParse(size, out coffeePrice) && Enum.TryParse(type, out coffeeType))
         {
-            if (this.TotalCoinValue >= (int)coffeePrice)
+            if (this.TotalCoinValue >= (int) coffeePrice)
             {
                 this.AddSoldCoffee(coffeeType);
                 this.TotalCoinValue = 0;
@@ -45,8 +44,7 @@ public class CoffeeMachine
 
         if (Enum.TryParse(coin, out coinValue))
         {
-            this.TotalCoinValue += (int)coinValue;
+            this.TotalCoinValue += (int) coinValue;
         }
     }
-
 }

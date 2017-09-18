@@ -2,7 +2,7 @@
 
 namespace _11.InfernoInfinity
 {
-     public class StartUp
+    public class StartUp
     {
         public static void Main()
         {

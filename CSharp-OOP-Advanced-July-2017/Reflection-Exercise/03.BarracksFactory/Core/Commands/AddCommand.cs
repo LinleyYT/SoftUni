@@ -5,12 +5,10 @@ namespace _03BarracksFactory.Core.Commands
 {
     public class AddCommand : Command
     {
-        [Inject]
-        private IRepository repository;
-        [Inject]
-        private IUnitFactory unitFactory;
+        [Inject] private IRepository repository;
+        [Inject] private IUnitFactory unitFactory;
 
-        public AddCommand(string[] data) 
+        public AddCommand(string[] data)
             : base(data)
         {
         }

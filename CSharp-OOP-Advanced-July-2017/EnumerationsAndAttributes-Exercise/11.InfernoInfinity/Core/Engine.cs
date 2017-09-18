@@ -11,6 +11,7 @@ namespace _11.InfernoInfinity.Core
         }
 
         public CommandInterpreter CommandInterpreter { get; private set; }
+
         public void Run()
         {
             string input = String.Empty;
@@ -33,12 +34,15 @@ namespace _11.InfernoInfinity.Core
                     case "Create":
                         CommandInterpreter.CreateWeapon(commandArgs.Skip(1).ToArray());
                         break;
+
                     case "Add":
                         CommandInterpreter.AddToWeapon(commandArgs.Skip(1).ToArray());
                         break;
+
                     case "Remove":
                         CommandInterpreter.RemoveGem(commandArgs.Skip(1).ToArray());
                         break;
+
                     case "Print":
                         CommandInterpreter.Print(commandArgs[1]);
                         break;

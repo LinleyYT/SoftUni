@@ -1,10 +1,9 @@
-﻿using System;
+﻿using _03BarracksFactory.Attributes;
+using _03BarracksFactory.Contracts;
+using System;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
-using _03BarracksFactory.Attributes;
-using _03BarracksFactory.Contracts;
-using _03BarracksFactory.Core.Commands;
 
 namespace _03BarracksFactory.Core
 {
@@ -20,7 +19,6 @@ namespace _03BarracksFactory.Core
             this.repository = repository;
             this.unitFactory = unitFactory;
         }
-        
 
         public IExecutable InterpretCommand(string[] data, string commandName)
         {
@@ -41,7 +39,7 @@ namespace _03BarracksFactory.Core
                 throw new InvalidOperationException("Invalid command!");
             }
 
-            IExecutable currentCommand = (IExecutable)Activator.CreateInstance(commandType, commandParams);
+            IExecutable currentCommand = (IExecutable) Activator.CreateInstance(commandType, commandParams);
 
             currentCommand = this.InjectDependencies(currentCommand);
 
@@ -52,7 +50,7 @@ namespace _03BarracksFactory.Core
         {
             FieldInfo[] fields = currentCommand.GetType()
                 .GetFields(BindingFlags.Instance
-                | BindingFlags.NonPublic)
+                           | BindingFlags.NonPublic)
                 .Where(f => f.GetCustomAttributes<InjectAttribute>() != null).ToArray();
 
             FieldInfo[] interpreterFields = this.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic);

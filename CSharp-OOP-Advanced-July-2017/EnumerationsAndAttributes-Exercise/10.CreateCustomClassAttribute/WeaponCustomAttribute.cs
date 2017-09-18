@@ -18,6 +18,5 @@ namespace _10.CreateCustomClassAttribute
         public int Revisions { get; private set; }
         public string Description { get; private set; }
         public List<string> Reviewers { get; private set; }
-        
     }
 }

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using _09.Collection_Hierarchy.Models.Interfaces;
+using System;
 using System.Collections.Generic;
-using _09.Collection_Hierarchy.Models.Interfaces;
 
 namespace _09.Collection_Hierarchy.Models.Classes
 {

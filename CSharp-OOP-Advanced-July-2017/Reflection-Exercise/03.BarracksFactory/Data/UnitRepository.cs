@@ -1,10 +1,11 @@
 ﻿namespace _03BarracksFactory.Data
 {
-    using System;
     using Contracts;
+    using System;
     using System.Collections.Generic;
     using System.Text;
-    class UnitRepository : IRepository
+
+    internal class UnitRepository : IRepository
     {
         private IDictionary<string, int> amountOfUnits;
 
@@ -21,7 +22,7 @@
                 foreach (var entry in amountOfUnits)
                 {
                     string formatedEntry =
-                            string.Format("{0} -> {1}", entry.Key, entry.Value);
+                        string.Format("{0} -> {1}", entry.Key, entry.Value);
                     statBuilder.AppendLine(formatedEntry);
                 }
 

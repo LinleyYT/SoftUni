@@ -1,9 +1,9 @@
 ﻿namespace _03BarracksFactory.Core
 {
-    using System;
     using Contracts;
+    using System;
 
-    class Engine : IRunnable
+    internal class Engine : IRunnable
     {
         private ICommandInterpreter commandInterpreter;
 
@@ -11,7 +11,7 @@
         {
             this.commandInterpreter = commandInterpreter;
         }
-        
+
         public void Run()
         {
             while (true)

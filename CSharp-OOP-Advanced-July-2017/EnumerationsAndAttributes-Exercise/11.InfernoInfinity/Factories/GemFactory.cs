@@ -1,7 +1,7 @@
-﻿using System;
-using _11.InfernoInfinity.Models.Classes.Gems;
+﻿using _11.InfernoInfinity.Models.Classes.Gems;
 using _11.InfernoInfinity.Models.Enums;
 using _11.InfernoInfinity.Models.Interfaces;
+using System;
 
 namespace _11.InfernoInfinity.Factories
 {
@@ -17,10 +17,13 @@ namespace _11.InfernoInfinity.Factories
             {
                 case "Ruby":
                     return new Ruby(clarity);
+
                 case "Emerald":
                     return new Emerald(clarity);
+
                 case "Amethyst":
                     return new Amethyst(clarity);
+
                 default:
                     return null;
             }

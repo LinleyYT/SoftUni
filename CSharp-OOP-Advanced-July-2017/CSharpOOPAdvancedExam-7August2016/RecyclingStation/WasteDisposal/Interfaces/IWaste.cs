@@ -9,6 +9,7 @@
         /// The name of the waste product.
         /// </summary>
         string Name { get; }
+
         /// <summary>
         /// Defines the volume in cubic centimeters (cm3) that 1 kilogram of Garbage takes.
         /// </summary>

@@ -19,9 +19,10 @@ namespace _03.Stack
                 {
                     case "Push":
                         var stackArgs = input.Substring(command.Length + 1)
-                            .Split(new[] { ", " }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
+                            .Split(new[] {", "}, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
                         stack.Push(stackArgs);
                         break;
+
                     case "Pop":
                         try
                         {

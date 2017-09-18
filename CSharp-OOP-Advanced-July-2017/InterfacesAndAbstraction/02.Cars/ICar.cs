@@ -4,6 +4,6 @@
     string Color { get; }
 
     string Start();
+
     string Stop();
 }
-

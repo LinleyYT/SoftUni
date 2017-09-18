@@ -13,10 +13,10 @@ public class AbstractHero : IHero, IComparable<AbstractHero>
     protected long hitPoints;
     protected long damage;
 
-    protected AbstractHero(string name, IInventory inventory)
+    protected AbstractHero(string name)
     {
         this.Name = name;
-        this.inventory = inventory;
+        this.inventory = new HeroInventory();
     }
 
     public string Name { get; private set; }

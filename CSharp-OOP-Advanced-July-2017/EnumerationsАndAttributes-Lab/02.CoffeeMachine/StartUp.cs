@@ -24,7 +24,5 @@ public class StartUp
         {
             Console.WriteLine(coffeeType);
         }
-
     }
 }
-

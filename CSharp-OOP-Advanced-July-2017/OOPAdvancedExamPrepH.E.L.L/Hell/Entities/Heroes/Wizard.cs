@@ -6,8 +6,8 @@
     private const long WizardHitPoints = 100;
     private const long WizardDamage = 250;
 
-    public Wizard(string name, IInventory inventory)
-        : base(name, inventory)
+    public Wizard(string name)
+        : base(name)
     {
         this.strength = WizardStrength;
         this.agility = WizardAgility;
